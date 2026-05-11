@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header/header";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <Header /> */}
       <body className={`${fontSans.variable} antialiased`}>
         {children}
       </body>
