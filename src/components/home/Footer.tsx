@@ -90,6 +90,14 @@ export default function Footer() {
                   "Kiosk",
                   "Kitchen Display System",
                   "Accessories",
+                  "Go",
+                  "Compact",
+                  "Flex Pocket",
+                  "Flex",
+                  "Mini",
+                  "Station Solo",
+                  "Station Duo"
+
                 ].map((item, index) => (
                   <Link
                     key={index}
