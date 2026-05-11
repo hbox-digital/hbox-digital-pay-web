@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import NewsletterForm from "../layouts/NewsletterForm";
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../Container";
@@ -102,15 +101,7 @@ const ComingSoon = () => {
           </div>
 
           {/* Newsletter Form */}
-          <div className="flex justify-center mb-8">
-            <NewsletterForm
-              buttonText="Notify Me"
-              placeholder="Enter your email"
-              successMessage="Thank you! We'll notify you when we launch."
-              buttonClassName="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors h-12"
-              inputClassName="h-12 px-4 border border-gray-300 rounded-md focus-visible:ring-1 focus-visible:ring-black focus-visible:ring-offset-0 max-w-sm"
-            />
-          </div>
+          
 
           {/* Launch Info */}
           <p className="text-sm text-primary mb-16">
