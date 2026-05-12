@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Container from "../Container";
 import Link from "next/link";
-import BookDiscoveryCallBtnTwo from "../common/BookDiscoveryCallBtnTwo";
-import BookDiscoveryCallBtn from "../common/BookDiscoveryCallBtn";
-import { ArrowUpRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 interface BigIdeaSectionProps {
   titleOne: string;
@@ -16,7 +14,7 @@ interface BigIdeaSectionProps {
   paragraph: string;
   imageSrc: string;
   sideImageSrc?: string;
-  buttons: { text: string;  }[];
+  buttons: { text: string; href?: string }[];
 }
 
 const BigIdeaSectionCTA = ({
@@ -30,90 +28,122 @@ const BigIdeaSectionCTA = ({
   buttons,
 }: BigIdeaSectionProps) => {
   return (
-    <section className="py-10 md:py-20 px-4 md:px-10 flex justify-center items-center h-200">
-        <Container> 
-      
-      {/* MAIN CONTAINER */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="mx-auto z-1 flex flex-col items-center w-full bg-black rounded-[32px]  overflow-visible relative"
-        style={{
-          minHeight: 400,
-          backgroundImage: `url("${imageSrc}")`, // ✅ FIXED
-          backgroundSize: "100% 100%",
-          backgroundPosition: "center",
-        }}
-      >
+    <section className="overflow-hidden py-8 sm:py-10 md:py-14 lg:py-20">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 45 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative overflow-hidden rounded-[34px] bg-[#0B0B0B]"
+        >
+          {/* BACKGROUND */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("${imageSrc}")`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          />
 
-        {/* ✅ PREMIUM GRADIENT OVERLAY */}
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent z-0" /> */}
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/75" />
 
-        <Container className="md:px-10 relative  z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between w-full h-full xl:h-[542px] py-10 lg:py-0">
+          {/* GOLD GLOW */}
+          <div className="absolute -left-10 top-0 h-[300px] w-[300px] rounded-full bg-[#FDC700]/10 blur-[120px]" />
 
-            {/* ================= LEFT CONTENT ================= */}
-            <div className="flex-1  flex flex-col justify-center max-w-[100%] lg:max-w-[50%] text-center lg:text-left">
-
-              <motion.h3
-                initial={{ opacity: 0, x: -30 }}
+          {/* MAIN GRID */}
+          <div className="relative z-10 grid min-h-[350px] grid-cols-1 lg:h-[352px] lg:grid-cols-12">
+            {/* LEFT SIDE */}
+            <div className="flex flex-col justify-center px-6 py-10 sm:px-8 md:px-12 lg:col-span-8 lg:px-14 lg:py-12">
+              {/* HEADING */}
+              <motion.h2
+                initial={{ opacity: 0, x: -35 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white leading-tight"
+                className="max-w-[760px] font-inter text-[38px] font-light leading-[42px] tracking-[-0.05em] text-white sm:text-[52px] sm:leading-[56px] md:text-[40px] md:leading-[40px]"
               >
-                {titleOne}{" "}
-                <span className="text-yellow-400">
-                  {titleTwo} {titleFour}
-                </span>
-                <br />
-                {titleThree}
-              </motion.h3>
+                {titleOne}
 
+                <br />
+
+                <span className="font-semibold text-[#FDC700]">
+                  {titleTwo}
+                </span>
+
+                {titleFour && (
+                  <span className="font-semibold text-[#FDC700]">
+                    {" "}
+                    {titleFour}
+                  </span>
+                )}
+
+                {titleThree && (
+                  <>
+                    <br />
+                    {titleThree}
+                  </>
+                )}
+              </motion.h2>
+
+              {/* DESCRIPTION */}
               <motion.p
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -35 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="text-white mb-6 leading-relaxed text-sm md:text-base"
+                className="mt-5 max-w-[760px] font-inter text-[15px] font-normal leading-[1.6] tracking-[-0.03em] text-white/72 sm:text-[17px] md:text-[18px]"
               >
                 {paragraph}
               </motion.p>
 
-              {/* BUTTONS */}
-<div className="flex gap-4 mt-2 justify-center lg:justify-start flex-wrap">
-  {buttons.map((button, index) => (
-    
-    <button className="group flex h-[46px] w-[321px] items-center justify-center gap-[10px] rounded-[24px] bg-[linear-gradient(178.88deg,#FFC400_-38.35%,#FFFFFF_285.31%)] px-[20px] py-[10px] text-[16.28px] font-medium leading-[16px] tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.02]">
-  <span>Explore HBOX Digital</span>
+              {/* BUTTON */}
+              <motion.div
+                initial={{ opacity: 0, x: -35 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="mt-7 flex flex-wrap items-center gap-4"
+              >
+                {buttons.map((button, index) => (
+                  <Link key={index} href={button.href || "/"}>
+                    <button className="group flex h-[48px] items-center gap-3 rounded-full bg-[#F7D84D] px-5 text-[15px] font-medium tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.03]">
+                      <span>{button.text}</span>
 
-  <ArrowUpRight className="h-[20px] w-[20px] stroke-[2.3] text-black transition-transform duration-300 group-hover:rotate-45" />
-</button>
-    
-  ))}
-</div>
-
+                      <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#FFE98F] transition-all duration-300 group-hover:rotate-12">
+                        <ExternalLink className="h-[16px] w-[16px] stroke-[2.2]" />
+                      </div>
+                    </button>
+                  </Link>
+                ))}
+              </motion.div>
             </div>
 
-            {/* ================= RIGHT IMAGE ================= */}
+            {/* RIGHT IMAGE */}
             {sideImageSrc && (
-              <div className="flex-1 flex justify-center lg:justify-end mt-8 lg:mt-0">
-                <Image
-                  src={sideImageSrc} // ✅ NO decodeURI needed
-                  alt="side image"
-                  width={650}
-                  height={800}
-                  // unoptimized
-                  className="object-contain w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] md:h-120 "
-                  priority
-                />
+              <div className="relative hidden lg:col-span-4 lg:block right-10">
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="absolute bottom-0 right-0 h-full w-[50%]"
+                >
+                  <Image
+                    src={sideImageSrc}
+                    alt="HBOX Digital"
+                    fill
+                    priority
+                    className="object-contain object-bottom object-right"
+                  />
+                </motion.div>
               </div>
             )}
-
           </div>
-        </Container>
-      </motion.div>
-       </Container> 
+        </motion.div>
+      </Container>
     </section>
   );
 };

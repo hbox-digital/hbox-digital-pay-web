@@ -1,5 +1,7 @@
 // components/home/WhyChooseSection.tsx
 
+"use client";
+
 import Container from "@/components/Container";
 import {
   MonitorSmartphone,
@@ -7,6 +9,7 @@ import {
   Banknote,
   LifeBuoy,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -41,12 +44,21 @@ export default function WhyChooseSection() {
       <Container>
         <div className="flex flex-col items-center">
           {/* HEADING */}
-          <h2 className="text-center text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[60px] md:leading-[68px]">
-            Why Businesses Choose {" "}
+          <motion.h2
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            className="text-center text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[60px] md:leading-[68px]"
+          >
+            Why Businesses Choose{" "}
             <span className="font-semibold text-[#39A935]">
-            HBOXPay
+              HBOXPay
             </span>
-          </h2>
+          </motion.h2>
 
           {/* CARDS */}
           <div className="mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -54,24 +66,61 @@ export default function WhyChooseSection() {
               const Icon = feature.icon;
 
               return (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 45 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.1,
+                  }}
+                  whileHover={{
+                    y: -6,
+                  }}
                   className="rounded-[24px] bg-[#EAEAEA] p-6 transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* ICON */}
-                  <div className="flex h-[56px] w-[56px] items-center justify-center rounded-[16px] bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)]">
+                  <motion.div
+                    whileHover={{
+                      scale: 1.08,
+                      rotate: 3,
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                    className="flex h-[56px] w-[56px] items-center justify-center rounded-[16px] bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)]"
+                  >
                     <Icon className="h-[28px] w-[28px] stroke-[2] text-black" />
-                  </div>
+                  </motion.div>
 
                   {/* CONTENT */}
-                  <h3 className="mt-10 text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+                  <motion.h3
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.15,
+                    }}
+                    className="mt-10 text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-black"
+                  >
                     {feature.title}
-                  </h3>
+                  </motion.h3>
 
-                  <p className="mt-4 text-[15px] leading-[1.45] tracking-[-0.03em] text-black/70">
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.2,
+                    }}
+                    className="mt-4 text-[15px] leading-[1.45] tracking-[-0.03em] text-black/70"
+                  >
                     {feature.description}
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               );
             })}
           </div>

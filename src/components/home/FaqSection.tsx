@@ -5,6 +5,7 @@
 import Container from "@/components/Container";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
@@ -51,16 +52,25 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="overflow-hidden bg-[#Fff] py-12 md:py-16 lg:py-24">
+    <section className="overflow-hidden bg-[#Fff] py-6 md:py-8 lg:py-8">
       <Container>
         <div className="mx-auto max-w-[1200px]">
           {/* HEADING */}
-          <h2 className="text-center text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[60px] md:leading-[68px]">
+          <motion.h2
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            className="text-center text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[60px] md:leading-[68px]"
+          >
             Frequently Asked{" "}
             <span className="font-semibold text-[#39A935]">
               Questions
             </span>
-          </h2>
+          </motion.h2>
 
           {/* FAQ LIST */}
           <div className="mt-10 flex flex-col gap-3">
@@ -68,8 +78,18 @@ export default function FaqSection() {
               const isOpen = openIndex === index;
 
               return (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.08,
+                  }}
+                  whileHover={{
+                    y: -2,
+                  }}
                   className="overflow-hidden rounded-[18px] bg-[#EAEAEA]"
                 >
                   <button
@@ -80,31 +100,61 @@ export default function FaqSection() {
                       {faq.question}
                     </span>
 
-                    <div className="shrink-0">
+                    <motion.div
+                      animate={{
+                        rotate: isOpen ? 180 : 0,
+                      }}
+                      transition={{
+                        duration: 0.25,
+                      }}
+                      className="shrink-0"
+                    >
                       {isOpen ? (
                         <Minus className="h-[18px] w-[18px] text-black/70" />
                       ) : (
                         <Plus className="h-[18px] w-[18px] text-black/70" />
                       )}
-                    </div>
+                    </motion.div>
                   </button>
 
-                  <div
-                    className={`grid transition-all duration-300 ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="px-6 pb-5">
-                        <p className="max-w-[900px] text-[14px] leading-[1.6] tracking-[-0.03em] text-black/65 sm:text-[15px]">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        animate={{
+                          height: "auto",
+                          opacity: 1,
+                        }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        transition={{
+                          duration: 0.35,
+                          ease: "easeInOut",
+                        }}
+                        className="overflow-hidden"
+                      >
+                        <motion.div
+                          initial={{ y: -10 }}
+                          animate={{ y: 0 }}
+                          exit={{ y: -10 }}
+                          transition={{
+                            duration: 0.25,
+                          }}
+                          className="px-6 pb-5"
+                        >
+                          <p className="max-w-[900px] text-[14px] leading-[1.6] tracking-[-0.03em] text-black/65 sm:text-[15px]">
+                            {faq.answer}
+                          </p>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               );
             })}
           </div>

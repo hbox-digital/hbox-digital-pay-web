@@ -1,5 +1,8 @@
 // components/layout/Footer.tsx
 
+"use client";
+
+import { useState } from "react";
 import Container from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +13,8 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const [showMoreHardware, setShowMoreHardware] = useState(false);
+
   return (
     <footer className="overflow-hidden border-t border-black/10 bg-[#Fff]">
       {/* TOP FOOTER */}
@@ -29,7 +34,9 @@ export default function Footer() {
               </Link>
 
               <p className="mt-6 max-w-[320px] text-[15px] leading-[1.45] tracking-[-0.03em] text-black/75">
-               Accept payments, manage sales, track performance, and simplify business operations with one connected POS and payment platform built for modern businesses. 
+                Accept payments, manage sales, track performance, and simplify
+                business operations with one connected POS and payment platform
+                built for modern businesses.
               </p>
 
               {/* SOCIALS */}
@@ -78,10 +85,11 @@ export default function Footer() {
 
             {/* HARDWARE */}
             <div>
-              <h3 className="text-[32px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+              <h3 className="text-[32px] font-medium  leading-[100%] tracking-[-0.04em] text-black">
                 Hardware Devices
               </h3>
 
+              {/* ALWAYS VISIBLE */}
               <div className="mt-6 flex flex-col gap-4">
                 {[
                   "PAX A920",
@@ -90,14 +98,6 @@ export default function Footer() {
                   "Kiosk",
                   "Kitchen Display System",
                   "Accessories",
-                  "Go",
-                  "Compact",
-                  "Flex Pocket",
-                  "Flex",
-                  "Mini",
-                  "Station Solo",
-                  "Station Duo"
-
                 ].map((item, index) => (
                   <Link
                     key={index}
@@ -107,6 +107,70 @@ export default function Footer() {
                     {item}
                   </Link>
                 ))}
+              </div>
+
+              {/* READ MORE BUTTON */}
+              <button
+                onClick={() =>
+                  setShowMoreHardware(!showMoreHardware)
+                }
+                className="
+                  mt-5
+                  flex
+                  items-center
+                  gap-2
+                  text-[15px]
+                  font-medium
+                  text-[#39A935]
+                  transition-all
+                  duration-300
+                  hover:opacity-80
+                "
+              >
+                {showMoreHardware ? "Show Less" : "Read More"}
+
+                <span
+                  className={`transition-transform duration-300 ${
+                    showMoreHardware ? "rotate-180" : ""
+                  }`}
+                >
+                  ↓
+                </span>
+              </button>
+
+              {/* HIDDEN ITEMS */}
+              <div
+                className={`
+                  overflow-hidden
+                  transition-all
+                  duration-500
+                  ease-in-out
+                  ${
+                    showMoreHardware
+                      ? "max-h-[500px] opacity-100 mt-5"
+                      : "max-h-0 opacity-0"
+                  }
+                `}
+              >
+                <div className="flex flex-col gap-4">
+                  {[
+                    "Go",
+                    "Compact",
+                    "Flex Pocket",
+                    "Flex",
+                    "Mini",
+                    "Station Solo",
+                    "Station Duo",
+                  ].map((item, index) => (
+                    <Link
+                      key={index}
+                      href="/"
+                      className="text-[15px] leading-[100%] tracking-[-0.03em] text-black/80 transition-all duration-300 hover:text-[#39A935]"
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -173,7 +237,14 @@ export default function Footer() {
             </p>
 
             <p className="mt-1 text-[14px] leading-[1.45] tracking-[-0.03em] text-black/75">
-             The logo, name, and graphics of HBOX PAY and its products & services are the trademarks of HBOX PAY company. All other company names, brand names, trademarks, and logos mentioned on this website are the property of their respective owners and do not constitute or imply endorsement, sponsorship or recommendation thereof by HBOX PAY and do not constitute or imply endorsement, sponsorship or recommendation of Branded Web-Studios by the respective trademark owner.
+              The logo, name, and graphics of HBOX PAY and its products &
+              services are the trademarks of HBOX PAY company. All other
+              company names, brand names, trademarks, and logos mentioned on
+              this website are the property of their respective owners and do
+              not constitute or imply endorsement, sponsorship or recommendation
+              thereof by HBOX PAY and do not constitute or imply endorsement,
+              sponsorship or recommendation of Branded Web-Studios by the
+              respective trademark owner.
             </p>
           </div>
         </Container>
