@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Manage payments, POS, inventory, analytics, and customer operations with HBOXPay. Built for retail, restaurants, cafes, salons, and growing businesses.",
 
   verification: {
-    google: "d_Xek3i466qoaE_zTmKEjx9uQmI2_5IZ9rEThz8cBs0",
+    google: "fgKcEh2ocs8zJRcyH-yaqwa0jUsXLpDk5LM5_qVOMfc",
   },
 
   keywords: [
@@ -68,9 +68,7 @@ export const metadata: Metadata = {
     description:
       "Manage payments, POS, inventory, analytics, and customer operations with HBOXPay.",
 
-    images: [
-      "https://cdn.hboxdigital.com/public/hbox-pay/images/og-image.png",
-    ],
+    images: ["https://cdn.hboxdigital.com/public/hbox-pay/images/og-image.png"],
   },
 
   robots: {
@@ -79,11 +77,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
@@ -98,9 +92,7 @@ export default function RootLayout({
               name: "HBOXPay",
               url: "https://www.hboxpay.com",
               logo: "https://cdn.hboxdigital.com/public/hbox-pay/images/logo.png",
-              sameAs: [
-                "https://www.linkedin.com/company/hbox-digital",
-              ],
+              sameAs: ["https://www.linkedin.com/company/hbox-digital"],
             }),
           }}
         />
