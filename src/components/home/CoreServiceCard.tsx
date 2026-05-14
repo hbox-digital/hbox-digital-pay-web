@@ -31,7 +31,7 @@ export default function CoreServiceCard({
     <Container>
     <div
       className={cn(
-        "overflow-hidden rounded-[24px] bg-[#ECECEC] p-3 md:p-4 m-5",
+        "overflow-hidden rounded-[24px] bg-[#F5F5F5] p-3 md:p-4 m-5",
         className
       )}
     >
@@ -55,7 +55,7 @@ export default function CoreServiceCard({
 
         {/* CONTENT SIDE */}
         <div className="flex flex-col justify-center lg:col-span-8 lg:px-2">
-          <span className="text-[11px] font-semibold uppercase leading-[100%] tracking-[0.05em] text-[#53B033]">
+          <span className="text-[16px] font-semibold uppercase leading-[100%] tracking-[0.05em] text-[#53B033]">
             {subtitle}
           </span>
 
@@ -63,17 +63,17 @@ export default function CoreServiceCard({
             {title}
           </h2>
 
-          <p className="mt-4 max-w-[700px] text-[14px] font-normal leading-[1.5] tracking-[-0.03em] text-black/70 sm:text-[15px]">
+          <p className="mt-4 max-w-[700px] text-[14px] md:text-[20px] font-normal leading-[1.5] tracking-[-0.03em] text-black/70 sm:text-[15px]">
             {description}
           </p>
 
-          <Link href={href} className="mt-5">
+          {/* <Link href={href} className="mt-5">
             <button className="group flex h-[40px] items-center gap-[10px] rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-5 text-[14px] font-medium leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.02]">
               <span>{buttonText}</span>
 
               <ArrowUpRight className="h-[16px] w-[16px] stroke-[2.2] transition-transform duration-300 group-hover:rotate-45" />
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

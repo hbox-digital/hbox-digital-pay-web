@@ -12,23 +12,19 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   {
     label: "Products",
-    href: "#",
+    href: "/products",
   },
   {
     label: "Solutions",
-    href: "#",
-  },
-  {
-    label: "Hardware",
-    href: "#",
+    href: "/solutions",
   },
   {
     label: "Pricing",
     href: "#",
   },
   {
-    label: "Resources",
-    href: "#",
+    label: "Services",
+    href: "/services",
   },
 ];
 
@@ -97,12 +93,13 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <div className="hidden items-center gap-5 md:flex">
               <Link
-                href="#"
+                href="/contact"
                 className="text-[16.32px] font-normal text-black transition-colors duration-200 hover:text-[#45890F]"
               >
-                Sign in
+                Contact Us
               </Link>
-
+            </div>
+            <div className="hidden items-center gap-5 md:flex">
               <Link
                 href="#"
                 className="text-[16.32px] font-normal text-black transition-colors duration-200 hover:text-[#45890F]"
@@ -118,7 +115,7 @@ export default function Header() {
               <Search className="h-[16px] w-[16px] stroke-[1.7]" />
             </button>
 
-            <button
+            {/* <button
               aria-label="Cart"
               className="flex items-center justify-center text-black transition-colors duration-200 hover:text-[#45890F] relative"
             >
@@ -126,7 +123,7 @@ export default function Header() {
               <span className="absolute -top-2 -right-2 h-4 w-4 bg-[#7ED957] rounded-full text-[10px] text-white flex items-center justify-center">
                 0
               </span>
-            </button>
+            </button> */}
 
             {/* Mobile Menu Button */}
             <button
@@ -244,7 +241,7 @@ export default function Header() {
                         <span>Sign in</span>
                       </Link>
                     </motion.div>
-                    
+
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -266,7 +263,9 @@ export default function Header() {
                       transition={{ delay: 0.4 }}
                       className="pt-6 mt-6 border-t border-gray-100"
                     >
-                      <p className="text-[12px] text-gray-400 mb-2">Need help?</p>
+                      <p className="text-[12px] text-gray-400 mb-2">
+                        Need help?
+                      </p>
                       <Link
                         href="mailto:support@hboxpay.com"
                         className="text-[13px] text-black hover:text-[#45890F] transition-colors"
@@ -280,7 +279,9 @@ export default function Header() {
                 {/* Menu Footer */}
                 <div className="p-6 border-t border-gray-100">
                   <div className="flex items-center justify-center gap-4">
-                    <span className="text-[11px] text-gray-400">© 2026 HBOX Pay</span>
+                    <span className="text-[11px] text-gray-400">
+                      © 2026 HBOX Pay
+                    </span>
                   </div>
                 </div>
               </div>

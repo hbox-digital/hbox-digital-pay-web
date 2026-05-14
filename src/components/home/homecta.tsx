@@ -94,7 +94,7 @@ const BigIdeaSectionCTA = ({
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="mt-5 max-w-[760px] font-inter text-[15px] font-normal leading-[1.6] tracking-[-0.03em] text-white/72 sm:text-[17px] md:text-[18px]"
+                className="mt-5 max-w-[760px] font-inter text-[15px] font-normal leading-[1.6] tracking-[-0.03em] text-white/72 sm:text-[17px] md:text-[20px]"
               >
                 {paragraph}
               </motion.p>

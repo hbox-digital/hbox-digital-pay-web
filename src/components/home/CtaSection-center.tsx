@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function CtaSection() {
   return (
-    <section className="overflow-hidden bg-[#Fff] py-12 md:py-16 lg:py-24">
+    <section className="overflow-hidden bg-[#Fff] py-8 md:py-10 lg:py-12">
       <Container>
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 40 }}

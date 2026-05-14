@@ -90,7 +90,7 @@ export default function FaqSection() {
                   whileHover={{
                     y: -2,
                   }}
-                  className="overflow-hidden rounded-[18px] bg-[#EAEAEA]"
+                  className="overflow-hidden rounded-[18px] bg-[#F5F5F5]"
                 >
                   <button
                     onClick={() => toggleFaq(index)}

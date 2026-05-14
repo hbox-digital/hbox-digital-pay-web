@@ -80,14 +80,11 @@ export default function BusinessSolutionsSection() {
                 duration: 0.7,
                 delay: 0.2,
               }}
-              className="max-w-[420px] lg:ml-auto"
+              className="max-w-[620px] lg:ml-auto"
             >
-          <p className="text-[14px] leading-[100%]  text-black sm:text-[16px] md:text-[20px] lg:text-[20px] xl:text-[20px]">
+          <p className="text-[14px] leading-[100%]  text-black sm:text-[16px] md:text-[30px] lg:text-[30px] xl:text-[30px]">
                 HBOXPay brings together payments, operations, reporting, and
-                customer management into one connected ecosystem. From
-                processing transactions to tracking inventory and monitoring
-                business performance, everything works together so your team can
-                move faster, serve better, and scale without operational chaos.
+                customer management into one connected ecosystem. 
               </p>
             </motion.div>
           </div>
@@ -107,7 +104,7 @@ export default function BusinessSolutionsSection() {
                 whileHover={{
                   y: -6,
                 }}
-                className="group rounded-[20px] bg-[#EAEAEA] p-5 transition-all duration-300 hover:-translate-y-1"
+                className="group rounded-[20px] bg-[#F5F5F5] p-5 transition-all duration-300 hover:-translate-y-1"
               >
                 <motion.div
                   whileHover={{
@@ -172,7 +169,7 @@ export default function BusinessSolutionsSection() {
                     duration: 0.7,
                     delay: 0.2 + index * 0.06,
                   }}
-                  className="mt-4 text-[14px] leading-[1.45] tracking-[-0.03em] text-black/70"
+                  className="mt-4 text-[14px] md:text-[20px] leading-[1.45] tracking-[-0.03em] text-black"
                 >
                   {card.description}
                 </motion.p>

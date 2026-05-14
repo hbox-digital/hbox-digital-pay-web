@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export default function KioskSection() {
   return (
-    <section className="overflow-hidden border-b-[4px] border-[#39A935] bg-[#F3F3F3] py-12 md:py-16 lg:py-24">
+    <section className="overflow-hidden border-b-[4px] border-[#39A935] bg-[#F5F5F5] py-12 md:py-16 lg:py-24">
       <Container>
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
           {/* LEFT CONTENT */}
@@ -33,7 +33,7 @@ export default function KioskSection() {
                   duration: 0.7,
                   delay: 0.1,
                 }}
-                className="text-[42px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[52px] md:text-[60px] md:leading-[68px]"
+                className="text-[42px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[52px] md:text-[50px] md:leading-[58px] md:text-[60px] md:leading-[68px]"
               >
                 <span className="font-semibold text-[#39A935]">
                   Kiosk
@@ -50,7 +50,7 @@ export default function KioskSection() {
                   duration: 0.7,
                   delay: 0.2,
                 }}
-                className="mt-6 max-w-[360px] text-[15px] leading-[1.5] tracking-[-0.03em] text-black/70 sm:text-[16px]"
+                className="mt-6 max-w-[360px] md:text-[20px] leading-[1.5] tracking-[-0.03em] text-black/70 sm:text-[16px]"
               >
                 Speed up ordering with a self service kiosk built for
                 restaurants, featuring fast payments, smooth ordering flows,

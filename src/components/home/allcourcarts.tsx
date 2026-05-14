@@ -39,9 +39,9 @@ const Allcourcarts = () => {
                 delay: 0.15,
                 ease: "easeOut",
               }}
-              className="max-w-[420px] lg:ml-auto"
+              className="max-w-[720px] lg:ml-auto"
             >
-              <p className="text-[15px] font-normal leading-[1.45] tracking-[-0.03em] text-black/80 sm:text-[16px]">
+              <p className="text-[15px] md:text-[30px] font-normal leading-[1.45] tracking-[-0.03em] text-black/80 sm:text-[16px]">
                 From payments to operations, HBOXPay gives businesses the tools
                 to manage sales, simplify workflows, and grow with confidence.
               </p>

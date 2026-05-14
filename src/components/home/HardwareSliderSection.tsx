@@ -60,7 +60,7 @@ export default function HardwareSliderSection() {
           {/* LEFT ARROW */}
           <button
             onClick={scrollLeft}
-            className="hidden h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#E7E7E7] text-black/40 transition-all duration-300 hover:bg-black hover:text-white xl:flex"
+            className="hidden h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#F5F5F5] text-black/40 transition-all duration-300 hover:bg-black hover:text-white xl:flex"
           >
             <ArrowLeft className="h-[18px] w-[18px]" />
           </button>
@@ -74,7 +74,7 @@ export default function HardwareSliderSection() {
               {duplicatedItems.map((item, index) => (
                 <div
                   key={index}
-                  className="group min-w-[85%] rounded-[24px] bg-[#EAEAEA] p-5 transition-all duration-300 hover:-translate-y-1 sm:min-w-[48%] lg:min-w-[32%] xl:min-w-[calc(25%-12px)]"
+                  className="group min-w-[85%] rounded-[24px] bg-[#F5F5F5] p-5 transition-all duration-300 hover:-translate-y-1 sm:min-w-[48%] lg:min-w-[32%] xl:min-w-[calc(25%-12px)]"
                 >
                   {/* IMAGE */}
                   <div className="relative flex h-[220px] items-center justify-center overflow-hidden rounded-[20px]">
@@ -101,7 +101,7 @@ export default function HardwareSliderSection() {
           {/* RIGHT ARROW */}
           <button
             onClick={scrollRight}
-            className="hidden h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#E7E7E7] text-black/40 transition-all duration-300 hover:bg-black hover:text-white xl:flex"
+            className="hidden h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#F5F5F5] text-black/40 transition-all duration-300 hover:bg-black hover:text-white xl:flex"
           >
             <ArrowRight className="h-[18px] w-[18px]" />
           </button>
@@ -111,14 +111,14 @@ export default function HardwareSliderSection() {
         <div className="mt-5 flex items-center justify-center gap-3 xl:hidden">
           <button
             onClick={scrollLeft}
-            className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#E7E7E7] text-black/40 transition-all duration-300 hover:bg-black hover:text-white"
+            className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#F5F5F5] text-black/40 transition-all duration-300 hover:bg-black hover:text-white"
           >
             <ArrowLeft className="h-[18px] w-[18px]" />
           </button>
 
           <button
             onClick={scrollRight}
-            className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#E7E7E7] text-black/40 transition-all duration-300 hover:bg-black hover:text-white"
+            className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#F5F5F5] text-black/40 transition-all duration-300 hover:bg-black hover:text-white"
           >
             <ArrowRight className="h-[18px] w-[18px]" />
           </button>

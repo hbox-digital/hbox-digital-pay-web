@@ -1,8 +1,6 @@
-import Container from "@/components/Container";
 import Allcourcarts from "@/components/home/allcourcarts";
 import BusinessSolutionsSection from "@/components/home/BusinessSolutionsSection";
 import BusinessTypesSection from "@/components/home/BusinessTypesSection";
-import CoreServiceCard from "@/components/home/CoreServiceCard";
 import CtaSection from "@/components/home/CtaSection-center";
 import FaqSection from "@/components/home/FaqSection";
 import HardwareSliderSection from "@/components/home/HardwareSliderSection";
@@ -12,9 +10,7 @@ import KioskSection from "@/components/home/KioskSection";
 import KitchenDisplaySection from "@/components/home/KitchenDisplaySection";
 import OperationsSection from "@/components/home/OperationsSection";
 import TrustedBanner from "@/components/home/TrustedBanner";
-import TwoCoreServiceCard from "@/components/home/TwoCoreServiceCard";
 import WhyChooseSection from "@/components/home/WhyChooseSection";
-import React from "react";
 
 const page = () => {
   return (

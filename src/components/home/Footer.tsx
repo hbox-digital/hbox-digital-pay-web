@@ -33,7 +33,7 @@ export default function Footer() {
                 />
               </Link>
 
-              <p className="mt-6 max-w-[320px] text-[15px] leading-[1.45] tracking-[-0.03em] text-black/75">
+              <p className="mt-6 max-w-[320px] md:text-[20px] text-[15px] leading-[1.45] tracking-[-0.03em] text-black">
                 Accept payments, manage sales, track performance, and simplify
                 business operations with one connected POS and payment platform
                 built for modern businesses.
@@ -85,7 +85,7 @@ export default function Footer() {
 
             {/* HARDWARE */}
             <div>
-              <h3 className="text-[32px] font-medium  leading-[100%] tracking-[-0.04em] text-black">
+              <h3 className="xl:text-[32px]  md:text-[25px]  lg:text-[25px] text-[20px] font-medium  leading-[100%] tracking-[-0.04em] text-black">
                 Hardware Devices
               </h3>
 
@@ -102,7 +102,7 @@ export default function Footer() {
                   <Link
                     key={index}
                     href="/"
-                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black/80 transition-all duration-300 hover:text-[#39A935]"
+                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
                   >
                     {item}
                   </Link>
@@ -165,7 +165,7 @@ export default function Footer() {
                     <Link
                       key={index}
                       href="/"
-                      className="text-[15px] leading-[100%] tracking-[-0.03em] text-black/80 transition-all duration-300 hover:text-[#39A935]"
+                      className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
                     >
                       {item}
                     </Link>
@@ -176,7 +176,7 @@ export default function Footer() {
 
             {/* HELP */}
             <div>
-              <h3 className="text-[32px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+              <h3 className="xl:text-[32px]  md:text-[25px]  lg:text-[25px] text-[20px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
                 Help
               </h3>
 
@@ -192,7 +192,7 @@ export default function Footer() {
                   <Link
                     key={index}
                     href="/"
-                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black/80 transition-all duration-300 hover:text-[#39A935]"
+                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
                   >
                     {item}
                   </Link>
@@ -202,22 +202,18 @@ export default function Footer() {
 
             {/* ABOUT */}
             <div>
-              <h3 className="text-[32px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+              <h3 className="xl:text-[32px]  md:text-[25px]  lg:text-[25px] text-[20px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
                 About
               </h3>
 
               <div className="mt-6 flex flex-col gap-4">
                 {[
                   "Blog",
-                  "Case studies",
-                  "Careers",
-                  "Intellectual Property",
-                  "Referrals",
                 ].map((item, index) => (
                   <Link
                     key={index}
                     href="/"
-                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black/80 transition-all duration-300 hover:text-[#39A935]"
+                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
                   >
                     {item}
                   </Link>
@@ -229,14 +225,14 @@ export default function Footer() {
       </div>
 
       {/* DISCLAIMER */}
-      <div className="border-t border-black/10 py-8">
+      <div className="border-t border-black py-8">
         <Container>
           <div className="max-w-[1280px]">
             <p className="text-[15px] font-semibold leading-[1.4] tracking-[-0.03em] text-black">
               Disclaimer:
             </p>
 
-            <p className="mt-1 text-[14px] leading-[1.45] tracking-[-0.03em] text-black/75">
+            <p className="mt-1 text-[14px] leading-[1.45] tracking-[-0.03em] text-black">
               The logo, name, and graphics of HBOX PAY and its products &
               services are the trademarks of HBOX PAY company. All other
               company names, brand names, trademarks, and logos mentioned on
@@ -251,10 +247,10 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM FOOTER */}
-      <div className="border-t border-black/10 py-6">
+      <div className="border-t border-black py-6">
         <Container>
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
-            <p className="text-[14px] leading-[100%] tracking-[-0.03em] text-black/75">
+            <p className="text-[14px] leading-[100%] tracking-[-0.03em] text-black">
               © 2026 HBOX Pay, LLC
             </p>
 
@@ -262,12 +258,11 @@ export default function Footer() {
               {[
                 "Terms & Conditions",
                 "Privacy Policy",
-                "Accessibility",
               ].map((item, index) => (
                 <Link
                   key={index}
                   href="/"
-                  className="text-[14px] leading-[100%] tracking-[-0.03em] text-black/75 transition-all duration-300 hover:text-[#39A935]"
+                  className="text-[14px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
                 >
                   {item}
                 </Link>

@@ -31,7 +31,7 @@ const featureCards = [
 
 export default function OperationsSection() {
   return (
-    <section className="bg-white py-12 md:py-16 lg:py-20 overflow-hidden">
+    <section className="bg-white py-8 md:py-10 lg:py-12 overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
           {/* LEFT SIDE */}
@@ -55,7 +55,7 @@ export default function OperationsSection() {
                   duration: 0.7,
                   delay: 0.1,
                 }}
-                className="text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[40px] md:leading-[68px]"
+                className="text-[30px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[30px] md:text-[50px] md:leading-[50px]"
               >
                 Built by the Team
                 <br />
@@ -72,7 +72,7 @@ export default function OperationsSection() {
                   duration: 0.7,
                   delay: 0.2,
                 }}
-                className="mt-5 max-w-[480px] text-[15px] leading-[1.5] tracking-[-0.03em] text-black/75 sm:text-[16px]"
+                className="mt-5 max-w-full text-[20px] leading-[1.5] tracking-[-0.03em] text-black sm:text-[16px]"
               >
                 From payment systems to custom software and mobile applications,
                 HBOX Digital builds technology solutions that help businesses
@@ -80,7 +80,7 @@ export default function OperationsSection() {
               </motion.p>
 
               {/* ARROWS */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -111,7 +111,7 @@ export default function OperationsSection() {
                 >
                   <ArrowRight className="h-[18px] w-[18px]" />
                 </motion.button>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* SMALL CARDS */}
@@ -129,7 +129,7 @@ export default function OperationsSection() {
                   whileHover={{
                     y: -5,
                   }}
-                  className="group relative overflow-hidden rounded-[26px] bg-[#EAEAEA] p-4"
+                  className="group relative overflow-hidden rounded-[26px] bg-[#F5F5F5] p-4"
                 >
                   {/* IMAGE */}
                   <motion.div
@@ -151,12 +151,12 @@ export default function OperationsSection() {
                     {card.title}
                   </h3>
 
-                  <p className="mt-4 max-w-[200px] text-[14px] leading-[1.45] tracking-[-0.03em] text-black/65">
+                  <p className="mt-4 md:mt-10 max-w-[200px] text-[20px] leading-[1.45] tracking-[-0.03em] text-black">
                     {card.description}
                   </p>
 
                   {/* BUTTON */}
-                  <Link
+                  {/* <Link
                     href="/"
                     className="absolute bottom-4 right-4"
                   >
@@ -170,7 +170,7 @@ export default function OperationsSection() {
                     >
                       <ExternalLink className="h-[20px] w-[20px] stroke-[2.2] text-black" />
                     </motion.button>
-                  </Link>
+                  </Link> */}
                 </motion.div>
               ))}
             </div>
@@ -191,7 +191,7 @@ export default function OperationsSection() {
               whileHover={{
                 y: -4,
               }}
-              className="flex h-full flex-col overflow-hidden rounded-[28px] bg-[#EAEAEA] p-4 md:p-5"
+              className="flex h-full flex-col overflow-hidden rounded-[28px] bg-[#F5F5F5] p-4 md:p-5"
             >
               {/* IMAGE */}
               <motion.div
@@ -232,14 +232,14 @@ export default function OperationsSection() {
                       duration: 0.7,
                       delay: 0.3,
                     }}
-                    className="mt-4 max-w-[520px] text-[15px] leading-[1.45] tracking-[-0.03em] text-black/70 sm:text-[16px]"
+                    className="mt-4 max-w-[520px] text-[15px] md:text-[20px] leading-[1.45] tracking-[-0.03em] text-black/70 sm:text-[12px]"
                   >
                     Keep accepting payments and managing sales even during
                     internet interruptions.
                   </motion.p>
                 </div>
 
-                <Link href="/">
+                {/* <Link href="/">
                   <motion.button
                     whileHover={{
                       scale: 1.08,
@@ -250,7 +250,7 @@ export default function OperationsSection() {
                   >
                     <ExternalLink className="h-[22px] w-[22px] stroke-[2.2] text-black" />
                   </motion.button>
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           </motion.div>

@@ -49,7 +49,7 @@ export default function KitchenDisplaySection() {
                   duration: 0.7,
                   delay: 0.2,
                 }}
-                className="mt-6 max-w-[470px] text-[15px] leading-[1.5] tracking-[-0.03em] text-black/70 sm:text-[16px]"
+                className="mt-6 max-w-[470px] text-[15px] md:text-[20px] leading-[1.5] tracking-[-0.03em] text-black "
               >
                 Keep orders organized with a connected kitchen display system
                 built to reduce delays, improve accuracy, and support faster
