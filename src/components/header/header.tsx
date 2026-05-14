@@ -4,10 +4,16 @@
 
 import Link from "next/link";
 import Container from "@/components/Container";
-import { Search, ShoppingCart, Menu, X, ChevronRight } from "lucide-react";
+import {
+  Search,
+  Menu,
+  X,
+  ChevronRight,
+} from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   {
@@ -29,39 +35,47 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false);
+
   const [scrolled, setScrolled] = useState(false);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
+
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
-  // Detect scroll for header background
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
       <header
-        className={`w-full border-b border-[#7ED957] bg-white transition-all duration-300 sticky top-0 z-50 ${
-          scrolled ? "shadow-md bg-white/95 backdrop-blur-sm" : ""
+        className={`sticky top-0 z-50 w-full border-b border-[#7ED957] bg-white transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 shadow-md backdrop-blur-sm"
+            : ""
         }`}
       >
         <Container className="flex h-[68px] items-center justify-between">
-          {/* Left side with logo */}
+          {/* LEFT */}
           <div className="flex items-center gap-14">
             <Link href="/" className="flex items-center">
               <Image
@@ -74,81 +88,123 @@ export default function Header() {
               />
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* DESKTOP NAV */}
             <nav className="hidden items-center gap-8 lg:flex">
-              {navLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="relative text-[16.28px] font-normal text-black transition-colors duration-200 hover:text-[#45890F] group"
-                >
-                  {item.label}
-                  <span className="absolute bottom-[-2px] left-0 w-0 h-[2px] bg-[#45890F] transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
+              {navLinks.map((item) => {
+                const isActive =
+                  pathname === item.href;
+
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={`group relative text-[16.28px] font-normal transition-colors duration-300 ${
+                      isActive
+                        ? "text-[#45890F]"
+                        : "text-black hover:text-[#45890F]"
+                    }`}
+                  >
+                    {item.label}
+
+                    <span
+                      className={`absolute bottom-[-4px] left-0 h-[2px] bg-[#45890F] transition-all duration-300 ${
+                        isActive
+                          ? "w-full"
+                          : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
           </div>
 
-          {/* Right side with actions */}
+          {/* RIGHT */}
           <div className="flex items-center gap-6">
             <div className="hidden items-center gap-5 md:flex">
               <Link
                 href="/contact"
-                className="text-[16.32px] font-normal text-black transition-colors duration-200 hover:text-[#45890F]"
+                className={`relative text-[16.32px] font-normal transition-colors duration-300 ${
+                  pathname === "/contact"
+                    ? "text-[#45890F]"
+                    : "text-black hover:text-[#45890F]"
+                }`}
               >
                 Contact Us
               </Link>
             </div>
+
             <div className="hidden items-center gap-5 md:flex">
               <Link
-                href="#"
-                className="text-[16.32px] font-normal text-black transition-colors duration-200 hover:text-[#45890F]"
+                href="/support"
+                className={`relative text-[16.32px] font-normal transition-colors duration-300 ${
+                  pathname === "/support"
+                    ? "text-[#45890F]"
+                    : "text-black hover:text-[#45890F]"
+                }`}
               >
                 Support
               </Link>
             </div>
 
+            {/* SEARCH */}
             <button
               aria-label="Search"
-              className="flex items-center justify-center text-black transition-colors duration-200 hover:text-[#45890F]"
+              className="flex items-center justify-center text-black transition-colors duration-300 hover:text-[#45890F]"
             >
               <Search className="h-[16px] w-[16px] stroke-[1.7]" />
             </button>
 
-            {/* <button
-              aria-label="Cart"
-              className="flex items-center justify-center text-black transition-colors duration-200 hover:text-[#45890F] relative"
-            >
-              <ShoppingCart className="h-[16px] w-[16px] stroke-[1.7]" />
-              <span className="absolute -top-2 -right-2 h-4 w-4 bg-[#7ED957] rounded-full text-[10px] text-white flex items-center justify-center">
-                0
-              </span>
-            </button> */}
-
-            {/* Mobile Menu Button */}
+            {/* MOBILE MENU BUTTON */}
             <button
               aria-label="Menu"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex items-center justify-center text-black transition-colors duration-200 hover:text-[#45890F] lg:hidden relative z-50"
+              onClick={() =>
+                setIsMobileMenuOpen(
+                  !isMobileMenuOpen
+                )
+              }
+              className="relative z-50 flex items-center justify-center text-black transition-colors duration-300 hover:text-[#45890F] lg:hidden"
             >
               <AnimatePresence mode="wait">
                 {isMobileMenuOpen ? (
                   <motion.div
                     key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+                    initial={{
+                      rotate: -90,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      rotate: 0,
+                      opacity: 1,
+                    }}
+                    exit={{
+                      rotate: 90,
+                      opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.2,
+                    }}
                   >
                     <X className="h-[20px] w-[20px]" />
                   </motion.div>
                 ) : (
                   <motion.div
                     key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+                    initial={{
+                      rotate: 90,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      rotate: 0,
+                      opacity: 1,
+                    }}
+                    exit={{
+                      rotate: -90,
+                      opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.2,
+                    }}
                   >
                     <Menu className="h-[20px] w-[20px]" />
                   </motion.div>
@@ -159,31 +215,37 @@ export default function Header() {
         </Container>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
+            {/* BACKDROP */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              onClick={() =>
+                setIsMobileMenuOpen(false)
+              }
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
             />
 
-            {/* Menu Panel */}
+            {/* PANEL */}
             <motion.div
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 bottom-0 w-[85%] max-w-[320px] bg-white z-40 lg:hidden shadow-2xl"
+              transition={{
+                type: "spring",
+                damping: 25,
+                stiffness: 200,
+              }}
+              className="fixed bottom-0 left-0 top-0 z-40 w-[85%] max-w-[320px] bg-white shadow-2xl lg:hidden"
             >
-              <div className="flex flex-col h-full">
-                {/* Menu Header */}
-                <div className="p-6 border-b border-gray-100">
+              <div className="flex h-full flex-col">
+                {/* HEADER */}
+                <div className="border-b border-gray-100 p-6">
                   <div className="flex items-center justify-between">
                     <Image
                       src="https://cdn.hboxdigital.com/public/hbox-pay/images/HBOX%20Pay%20logo.png"
@@ -192,83 +254,160 @@ export default function Header() {
                       height={30}
                       className="h-[30px] w-[100px] object-contain"
                     />
+
                     <button
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-2 -mr-2 text-black hover:text-[#45890F] transition-colors"
+                      onClick={() =>
+                        setIsMobileMenuOpen(false)
+                      }
+                      className="p-2 -mr-2 text-black transition-colors hover:text-[#45890F]"
                     >
                       <X className="h-[20px] w-[20px]" />
                     </button>
                   </div>
                 </div>
 
-                {/* Navigation Links */}
+                {/* NAVIGATION */}
                 <nav className="flex-1 overflow-y-auto">
-                  <div className="p-6 space-y-2">
-                    {navLinks.map((item, index) => (
-                      <motion.div
-                        key={item.label}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
-                      >
-                        <Link
-                          href={item.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="flex items-center justify-between py-3 text-[16px] font-normal text-black transition-colors duration-200 hover:text-[#45890F] group"
-                        >
-                          <span>{item.label}</span>
-                          <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-1" />
-                        </Link>
-                      </motion.div>
-                    ))}
+                  <div className="space-y-2 p-6">
+                    {navLinks.map(
+                      (item, index) => {
+                        const isActive =
+                          pathname === item.href;
+
+                        return (
+                          <motion.div
+                            key={item.label}
+                            initial={{
+                              opacity: 0,
+                              x: -20,
+                            }}
+                            animate={{
+                              opacity: 1,
+                              x: 0,
+                            }}
+                            transition={{
+                              delay:
+                                index * 0.05,
+                            }}
+                          >
+                            <Link
+                              href={item.href}
+                              onClick={() =>
+                                setIsMobileMenuOpen(
+                                  false
+                                )
+                              }
+                              className={`group flex items-center justify-between py-3 text-[16px] font-normal transition-colors duration-300 ${
+                                isActive
+                                  ? "text-[#45890F]"
+                                  : "text-black hover:text-[#45890F]"
+                              }`}
+                            >
+                              <span>
+                                {item.label}
+                              </span>
+
+                              <ChevronRight
+                                className={`h-4 w-4 transition-all duration-300 ${
+                                  isActive
+                                    ? "translate-x-1 opacity-100 text-[#45890F]"
+                                    : "opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+                                }`}
+                              />
+                            </Link>
+                          </motion.div>
+                        );
+                      }
+                    )}
                   </div>
 
-                  {/* Divider */}
-                  <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-2"></div>
+                  {/* DIVIDER */}
+                  <div className="my-2 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
 
-                  {/* Mobile Auth Links */}
-                  <div className="p-6 space-y-4">
+                  {/* EXTRA LINKS */}
+                  <div className="space-y-4 p-6">
                     <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.3 }}
+                      initial={{
+                        opacity: 0,
+                        x: -20,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                      }}
+                      transition={{
+                        delay: 0.3,
+                      }}
                     >
                       <Link
-                        href="#"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="flex items-center gap-2 py-2 text-[15px] font-medium text-black transition-colors duration-200 hover:text-[#45890F]"
+                        href="/contact"
+                        onClick={() =>
+                          setIsMobileMenuOpen(
+                            false
+                          )
+                        }
+                        className={`flex items-center gap-2 py-2 text-[15px] font-medium transition-colors duration-300 ${
+                          pathname === "/contact"
+                            ? "text-[#45890F]"
+                            : "text-black hover:text-[#45890F]"
+                        }`}
                       >
-                        <span>Sign in</span>
+                        <span>
+                          Contact Us
+                        </span>
                       </Link>
                     </motion.div>
 
                     <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.35 }}
+                      initial={{
+                        opacity: 0,
+                        x: -20,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                      }}
+                      transition={{
+                        delay: 0.35,
+                      }}
                     >
                       <Link
-                        href="#"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="flex items-center gap-2 py-2 text-[15px] font-medium text-black transition-colors duration-200 hover:text-[#45890F]"
+                        href="/support"
+                        onClick={() =>
+                          setIsMobileMenuOpen(
+                            false
+                          )
+                        }
+                        className={`flex items-center gap-2 py-2 text-[15px] font-medium transition-colors duration-300 ${
+                          pathname === "/support"
+                            ? "text-[#45890F]"
+                            : "text-black hover:text-[#45890F]"
+                        }`}
                       >
                         <span>Support</span>
                       </Link>
                     </motion.div>
 
-                    {/* Contact Info */}
+                    {/* CONTACT */}
                     <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.4 }}
-                      className="pt-6 mt-6 border-t border-gray-100"
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        delay: 0.4,
+                      }}
+                      className="mt-6 border-t border-gray-100 pt-6"
                     >
-                      <p className="text-[12px] text-gray-400 mb-2">
+                      <p className="mb-2 text-[12px] text-gray-400">
                         Need help?
                       </p>
+
                       <Link
                         href="mailto:support@hboxpay.com"
-                        className="text-[13px] text-black hover:text-[#45890F] transition-colors"
+                        className="text-[13px] text-black transition-colors hover:text-[#45890F]"
                       >
                         support@hboxpay.com
                       </Link>
@@ -276,8 +415,8 @@ export default function Header() {
                   </div>
                 </nav>
 
-                {/* Menu Footer */}
-                <div className="p-6 border-t border-gray-100">
+                {/* FOOTER */}
+                <div className="border-t border-gray-100 p-6">
                   <div className="flex items-center justify-center gap-4">
                     <span className="text-[11px] text-gray-400">
                       © 2026 HBOX Pay
