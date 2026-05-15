@@ -3,17 +3,18 @@
 "use client";
 
 import Link from "next/link";
-import Container from "@/components/Container";
 import {
   Search,
   Menu,
   X,
   ChevronRight,
+  ChevronDown,
 } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Container from "../Container";
 
 const navLinks = [
   {
@@ -31,6 +32,56 @@ const navLinks = [
   {
     label: "Services",
     href: "/services",
+    dropdown: [
+      {
+        title: "POS Software",
+        href: "/pos-software",
+      },
+      {
+        title: "Payment Processing",
+        href: "/payment-processing",
+      },
+      {
+        title: "Hardware Solutions",
+        href: "/hardware-solutions",
+      },
+      {
+        title: "Inventory Management",
+        href: "/inventory-management",
+      },
+      {
+        title: "Analytics & Reporting",
+        href: "/analytics-reporting",
+      },
+      {
+        title: "Employee Management",
+        href: "/employee-management",
+      },
+      {
+        title: "Multi Store Management",
+        href: "/multi-store-management",
+      },
+      {
+        title: "Customer Management CRM",
+        href: "/customer-management-crm",
+      },
+      {
+        title: "Loyalty Programs",
+        href: "/loyalty-programs",
+      },
+      {
+        title: "Ecommerce Integration",
+        href: "/ecommerce-integration",
+      },
+      {
+        title: "Invoicing & Accounting",
+        href: "/invoicing-accounting",
+      },
+      {
+        title: "Business Financing",
+        href: "/business-financing",
+      },
+    ],
   },
 ];
 
@@ -92,28 +143,96 @@ export default function Header() {
             <nav className="hidden items-center gap-8 lg:flex">
               {navLinks.map((item) => {
                 const isActive =
-                  pathname === item.href;
+                  pathname === item.href ||
+                  item.dropdown?.some(
+                    (subItem) =>
+                      pathname === subItem.href
+                  );
 
                 return (
-                  <Link
+                  <div
                     key={item.label}
-                    href={item.href}
-                    className={`group relative text-[16.28px] font-normal transition-colors duration-300 ${
-                      isActive
-                        ? "text-[#45890F]"
-                        : "text-black hover:text-[#45890F]"
-                    }`}
+                    className="group/nav relative"
                   >
-                    {item.label}
-
-                    <span
-                      className={`absolute bottom-[-4px] left-0 h-[2px] bg-[#45890F] transition-all duration-300 ${
+                    <Link
+                      href={item.href}
+                      className={`relative flex items-center gap-1 text-[16.28px] font-normal transition-colors duration-300 ${
                         isActive
-                          ? "w-full"
-                          : "w-0 group-hover:w-full"
+                          ? "text-[#45890F]"
+                          : "text-black hover:text-[#45890F]"
                       }`}
-                    />
-                  </Link>
+                    >
+                      {item.label}
+
+                      {item.dropdown && (
+                        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover/nav:rotate-180" />
+                      )}
+
+                      <span
+                        className={`absolute bottom-[-4px] left-0 h-[2px] bg-[#45890F] transition-all duration-300 ${
+                          isActive
+                            ? "w-full"
+                            : "w-0 group-hover/nav:w-full"
+                        }`}
+                      />
+                    </Link>
+
+                    {/* SERVICES DROPDOWN */}
+                    {item.dropdown && (
+                      <div className="pointer-events-none absolute  top-full  z-50  -translate-x-1/2 pt-5 opacity-0 transition-all duration-300 group-hover/nav:pointer-events-auto group-hover/nav:opacity-100">
+                        <motion.div
+                          initial={{ opacity: 0, y: 12 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.25 }}
+                          className=" border border-white/10 rounded-4xl w-[55vw] bg-gradient-to-t from-[#A3EC68] to-[#FFFFFF] p-4 "
+                        >
+                          <Container>
+                          <div className="grid grid-cols-3 gap-3">
+                            {item.dropdown.map(
+                              (subItem) => {
+                                const isSubActive =
+                                  pathname ===
+                                  subItem.href;
+
+                                return (
+                                  <Link
+                                    key={subItem.title}
+                                    href={
+                                      subItem.href
+                                    }
+                                    className={`group/item flex min-h-[43px] items-center rounded-[8px] bg-[#F5F5F5] px-3 transition-all duration-300 hover:bg-[#151515] ${
+                                      isSubActive
+                                        ? "bg-[#151515]"
+                                        : ""
+                                    }`}
+                                  >
+                                    <div className="flex items-center gap-3">
+                                      <span className="flex h-[23px] w-[23px] items-center justify-center rounded-[4px] bg-[#45890F] transition-transform duration-300 group-hover/item:scale-105">
+                                        <ChevronRight className="h-4 w-4 stroke-[2.5] text-black" />
+                                      </span>
+
+                                      <span
+                                        className={`text-[12px] font-semibold uppercase tracking-[0.02em] transition-colors duration-300 ${
+                                          isSubActive
+                                            ? "text-[#45890F]"
+                                            : "text-black group-hover/item:text-[#95ce66]"
+                                        }`}
+                                      >
+                                        {
+                                          subItem.title
+                                        }
+                                      </span>
+                                    </div>
+                                  </Link>
+                                );
+                              }
+                            )}
+                          </div>
+                          </Container>
+                        </motion.div>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </nav>
@@ -241,7 +360,7 @@ export default function Header() {
                 damping: 25,
                 stiffness: 200,
               }}
-              className="fixed bottom-0 left-0 top-0 z-40 w-[85%] max-w-[320px] bg-white shadow-2xl lg:hidden"
+              className="fixed bottom-0 left-0 top-0 z-40 w-[85%] max-w-[340px] bg-white shadow-2xl lg:hidden"
             >
               <div className="flex h-full flex-col">
                 {/* HEADER */}
@@ -259,7 +378,7 @@ export default function Header() {
                       onClick={() =>
                         setIsMobileMenuOpen(false)
                       }
-                      className="p-2 -mr-2 text-black transition-colors hover:text-[#45890F]"
+                      className="-mr-2 p-2 text-black transition-colors hover:text-[#45890F]"
                     >
                       <X className="h-[20px] w-[20px]" />
                     </button>
@@ -272,7 +391,12 @@ export default function Header() {
                     {navLinks.map(
                       (item, index) => {
                         const isActive =
-                          pathname === item.href;
+                          pathname === item.href ||
+                          item.dropdown?.some(
+                            (subItem) =>
+                              pathname ===
+                              subItem.href
+                          );
 
                         return (
                           <motion.div
@@ -289,6 +413,7 @@ export default function Header() {
                               delay:
                                 index * 0.05,
                             }}
+                            className="space-y-2"
                           >
                             <Link
                               href={item.href}
@@ -307,14 +432,63 @@ export default function Header() {
                                 {item.label}
                               </span>
 
-                              <ChevronRight
-                                className={`h-4 w-4 transition-all duration-300 ${
-                                  isActive
-                                    ? "translate-x-1 opacity-100 text-[#45890F]"
-                                    : "opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-                                }`}
-                              />
+                              {item.dropdown ? (
+                                <ChevronDown
+                                  className={`h-4 w-4 transition-all duration-300 ${
+                                    isActive
+                                      ? "text-[#45890F]"
+                                      : "text-black"
+                                  }`}
+                                />
+                              ) : (
+                                <ChevronRight
+                                  className={`h-4 w-4 transition-all duration-300 ${
+                                    isActive
+                                      ? "translate-x-1 opacity-100 text-[#45890F]"
+                                      : "opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+                                  }`}
+                                />
+                              )}
                             </Link>
+
+                            {/* MOBILE SERVICES SUB LINKS */}
+                            {item.dropdown && (
+                              <div className="ml-2 space-y-2 border-l border-gray-200 pl-4">
+                                {item.dropdown.map(
+                                  (subItem) => {
+                                    const isSubActive =
+                                      pathname ===
+                                      subItem.href;
+
+                                    return (
+                                      <Link
+                                        key={
+                                          subItem.title
+                                        }
+                                        href={
+                                          subItem.href
+                                        }
+                                        onClick={() =>
+                                          setIsMobileMenuOpen(
+                                            false
+                                          )
+                                        }
+                                        className={`flex items-center gap-2 rounded-lg py-2 text-[14px] transition-colors duration-300 ${
+                                          isSubActive
+                                            ? "text-[#45890F]"
+                                            : "text-gray-600 hover:text-[#45890F]"
+                                        }`}
+                                      >
+                                        <ChevronRight className="h-3 w-3" />
+                                        {
+                                          subItem.title
+                                        }
+                                      </Link>
+                                    );
+                                  }
+                                )}
+                              </div>
+                            )}
                           </motion.div>
                         );
                       }
@@ -419,7 +593,7 @@ export default function Header() {
                 <div className="border-t border-gray-100 p-6">
                   <div className="flex items-center justify-center gap-4">
                     <span className="text-[11px] text-gray-400">
-                      © 2026 HBOX Pay
+                      © 2026 HBOX Digital LLC
                     </span>
                   </div>
                 </div>

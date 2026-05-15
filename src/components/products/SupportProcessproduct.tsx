@@ -92,8 +92,8 @@ export default function SupportProcessSectionpro({
                   sm:text-[48px]
                   sm:leading-[54px]
 
-                  md:text-[60px]
-                  md:leading-[68px]
+                  md:text-[clamp(2rem,4vw,2.625rem)]
+                  md:leading-[48px]
                 "
               >
                 {title}{" "}

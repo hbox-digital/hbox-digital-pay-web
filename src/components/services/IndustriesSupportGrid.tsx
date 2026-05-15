@@ -68,7 +68,7 @@ export default function IndustriesSupportGrid({
               tracking-[-0.04em]
               text-black
 
-              md:text-[60px]
+              md:text-[42px]
             "
           >
             {title}{" "}

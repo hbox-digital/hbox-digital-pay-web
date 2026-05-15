@@ -56,7 +56,7 @@ export default function KitchenDisplaySection() {
                 service operations.
               </motion.p>
 
-              <Link href="/" className="mt-8 inline-flex">
+              <Link href="/products/kitchen-display-system" className="mt-8 inline-flex">
                 <motion.button
                   whileHover={{
                     scale: 1.03,

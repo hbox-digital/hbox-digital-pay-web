@@ -111,8 +111,8 @@ export default function CtaBannerSection({
                 sm:text-[36px]
                 sm:leading-[32px]
                 max-w-[660px]
-                md:text-[50px]
-                md:leading-[60px]
+                md:text-[42px]
+                md:leading-[52px]
               "
             >
               {title}{" "}

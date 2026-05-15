@@ -57,7 +57,7 @@ export default function KioskSection() {
                 and a simple customer experience.
               </motion.p>
 
-              <Link href="/" className="mt-8 inline-flex">
+              <Link href="/products/self-order-kiosk" className="mt-8 inline-flex">
                 <motion.button
                   whileHover={{
                     scale: 1.03,
@@ -66,7 +66,7 @@ export default function KioskSection() {
                   whileTap={{ scale: 0.96 }}
                   className="group flex h-[42px] items-center gap-[10px] rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-5 text-[13px] font-medium leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.02]"
                 >
-                  <span>Contact Sales</span>
+                  <span> Explore Service Solutions</span>
 
                   <motion.div
                     whileHover={{ rotate: 45 }}

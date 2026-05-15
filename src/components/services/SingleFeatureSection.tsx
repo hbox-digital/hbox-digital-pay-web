@@ -99,7 +99,7 @@ export default function SingleFeatureSection({
                 tracking-[-0.04em]
                 text-black
 
-                md:text-[52px]
+                md:text-[42px]
               "
             >
               {title}{" "}

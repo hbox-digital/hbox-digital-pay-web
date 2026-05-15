@@ -2,63 +2,149 @@
 
 "use client";
 
-import { useState } from "react";
 import Container from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+
+const hardwareLinks = [
+  {
+    label: "PAX A920",
+    href: "/hardware/pax-a920",
+  },
+  {
+    label: "PAX E700",
+    href: "/hardware/pax-e700",
+  },
+  {
+    label: "PAX E800",
+    href: "/hardware/pax-e800",
+  },
+  {
+    label: "Kiosk",
+    href: "/hardware/kiosk",
+  },
+  {
+    label: "Kitchen Display System",
+    href: "/hardware/kitchen-display-system",
+  },
+  {
+    label: "Accessories",
+    href: "/hardware/accessories",
+  },
+];
+
+const helpLinks = [
+  {
+    label: "Help Center",
+    href: "/support",
+  },
+  {
+    label: "FAQ",
+    href: "/faq",
+  },
+  {
+    label: "Contact us",
+    href: "/contact",
+  },
+  {
+    label: "Contact sales",
+    href: "/contact-sales",
+  },
+  {
+    label: "Small Business Resources",
+    href: "/small-business-resources",
+  },
+];
+
+const aboutLinks = [
+  {
+    label: "Blog",
+    href: "/blog",
+  },
+];
 
 export default function Footer() {
-  const [showMoreHardware, setShowMoreHardware] = useState(false);
-
   return (
-    <footer className="overflow-hidden border-t border-black/10 bg-[#Fff]">
+    <footer className="overflow-hidden border-t border-black/10 bg-white text-black">
       {/* TOP FOOTER */}
-      <div className="py-12 md:py-16">
+      <div className="border-b border-black/10">
         <Container>
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_0.8fr]">
             {/* BRAND */}
-            <div>
-              <Link href="/">
+            <div className="px-0 py-8 lg:border-r lg:border-black/10 lg:pr-10">
+              <Link href="/" className="inline-flex">
                 <Image
                   src="https://cdn.hboxdigital.com/public/hbox-pay/images/HBOX%20Pay%20logo.png"
                   alt="HBOX Pay"
-                  width={138}
-                  height={40}
-                  className="h-auto w-[138px]"
+                  width={120}
+                  height={35}
+                  className="h-auto w-[120px] object-contain"
                 />
               </Link>
 
-              <p className="mt-6 max-w-[320px] md:text-[20px] text-[15px] leading-[1.45] tracking-[-0.03em] text-black">
+              <p className="mt-4 max-w-[260px] text-[13px] leading-[1.55] tracking-[-0.02em] text-black">
                 Accept payments, manage sales, track performance, and simplify
                 business operations with one connected POS and payment platform
                 built for modern businesses.
               </p>
 
+              <div className="mt-7">
+                <h4 className="text-[15px] font-semibold leading-none text-black">
+                  Contact Us
+                </h4>
+
+                <Link
+                  href="tel:+16052991570"
+                  className="mt-3 inline-block text-[12px] leading-none text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                >
+                  (605) 299-1570
+                </Link>
+              </div>
+
+              <div className="mt-7">
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="https://cdn.hboxdigital.com/public/hbox-pay/images/service/Ellipse%206386.png"
+                    alt="United States"
+                    width={30}
+                    height={30}
+                    className="h-[30px] w-[30px] object-contain"
+                  />
+
+                  <h4 className="text-[15px] font-semibold leading-none text-black">
+                    United States
+                  </h4>
+                </div>
+
+                <p className="mt-3 max-w-[250px] text-[12px] leading-[1.45] tracking-[-0.02em] text-black">
+                  11 Apex Dr Suite 300-A, Marlborough,
+                  <br />
+                  MA01752, United States
+                </p>
+              </div>
+
               {/* SOCIALS */}
-              <div className="mt-7 flex items-center gap-4">
+              <div className="mt-7 flex items-center gap-5">
                 <Link
                   href="/"
-                  className="transition-all duration-300 hover:scale-110"
+                  aria-label="Facebook"
+                  className="text-[#2F7D22] transition-all duration-300 hover:scale-110 hover:text-[#1F6217]"
                 >
-                  <Facebook className="h-[28px] w-[28px] fill-[#2F7D22] text-[#2F7D22]" />
+                  <Facebook className="h-[17px] w-[17px] fill-current stroke-[2]" />
                 </Link>
 
                 <Link
                   href="/"
-                  className="transition-all duration-300 hover:scale-110"
+                  aria-label="X"
+                  className="text-[#2F7D22] transition-all duration-300 hover:scale-110 hover:text-[#1F6217]"
                 >
                   <svg
-                    width="28"
-                    height="28"
+                    width="17"
+                    height="17"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-[#2F7D22]"
                   >
                     <path
                       d="M18 3H21L14 10.91L22 21H15L9.5 14L3.5 21H0.5L8 12.5L0 3H7L12 9.3L18 3ZM16.5 19H18.5L6.5 5H4.3L16.5 19Z"
@@ -69,153 +155,74 @@ export default function Footer() {
 
                 <Link
                   href="/"
-                  className="transition-all duration-300 hover:scale-110"
+                  aria-label="Instagram"
+                  className="text-[#2F7D22] transition-all duration-300 hover:scale-110 hover:text-[#1F6217]"
                 >
-                  <Instagram className="h-[28px] w-[28px] text-[#2F7D22]" />
+                  <Instagram className="h-[17px] w-[17px] stroke-[2]" />
                 </Link>
 
                 <Link
                   href="/"
-                  className="transition-all duration-300 hover:scale-110"
+                  aria-label="LinkedIn"
+                  className="text-[#2F7D22] transition-all duration-300 hover:scale-110 hover:text-[#1F6217]"
                 >
-                  <Linkedin className="h-[28px] w-[28px] fill-[#2F7D22] text-[#2F7D22]" />
+                  <Linkedin className="h-[17px] w-[17px] fill-current stroke-[2]" />
                 </Link>
               </div>
             </div>
 
             {/* HARDWARE */}
-            <div>
-              <h3 className="xl:text-[32px]  md:text-[25px]  lg:text-[25px] text-[20px] font-medium  leading-[100%] tracking-[-0.04em] text-black">
+            <div className="border-t border-black/10 px-0 py-8 md:border-t-0 md:px-8 lg:border-r lg:border-black/10 lg:px-10">
+              <h3 className="text-[20px] font-medium leading-none tracking-[-0.03em] text-black">
                 Hardware Devices
               </h3>
 
-              {/* ALWAYS VISIBLE */}
-              <div className="mt-6 flex flex-col gap-4">
-                {[
-                  "PAX A920",
-                  "PAX E700",
-                  "PAX E800",
-                  "Kiosk",
-                  "Kitchen Display System",
-                  "Accessories",
-                ].map((item, index) => (
+              <div className="mt-6 flex flex-col gap-5">
+                {hardwareLinks.map((item) => (
                   <Link
-                    key={index}
-                    href="/"
-                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
+                    key={item.label}
+                    href={item.href}
+                    className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 ))}
-              </div>
-
-              {/* READ MORE BUTTON */}
-              <button
-                onClick={() =>
-                  setShowMoreHardware(!showMoreHardware)
-                }
-                className="
-                  mt-5
-                  flex
-                  items-center
-                  gap-2
-                  text-[15px]
-                  font-medium
-                  text-[#39A935]
-                  transition-all
-                  duration-300
-                  hover:opacity-80
-                "
-              >
-                {showMoreHardware ? "Show Less" : "Read More"}
-
-                <span
-                  className={`transition-transform duration-300 ${
-                    showMoreHardware ? "rotate-180" : ""
-                  }`}
-                >
-                  ↓
-                </span>
-              </button>
-
-              {/* HIDDEN ITEMS */}
-              <div
-                className={`
-                  overflow-hidden
-                  transition-all
-                  duration-500
-                  ease-in-out
-                  ${
-                    showMoreHardware
-                      ? "max-h-[500px] opacity-100 mt-5"
-                      : "max-h-0 opacity-0"
-                  }
-                `}
-              >
-                <div className="flex flex-col gap-4">
-                  {[
-                    "Go",
-                    "Compact",
-                    "Flex Pocket",
-                    "Flex",
-                    "Mini",
-                    "Station Solo",
-                    "Station Duo",
-                  ].map((item, index) => (
-                    <Link
-                      key={index}
-                      href="/"
-                      className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
-                    >
-                      {item}
-                    </Link>
-                  ))}
-                </div>
               </div>
             </div>
 
             {/* HELP */}
-            <div>
-              <h3 className="xl:text-[32px]  md:text-[25px]  lg:text-[25px] text-[20px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+            <div className="border-t border-black/10 px-0 py-8 md:border-t-0 md:px-8 lg:border-r lg:border-black/10 lg:px-10">
+              <h3 className="text-[20px] font-medium leading-none tracking-[-0.03em] text-black">
                 Help
               </h3>
 
-              <div className="mt-6 flex flex-col gap-4">
-                {[
-                  "Help Center",
-                  "FAQ",
-                  "Contact us",
-                  "HBOX Care",
-                  "Contact sales",
-                  "Small Business Resources",
-                ].map((item, index) => (
+              <div className="mt-6 flex flex-col gap-5">
+                {helpLinks.map((item) => (
                   <Link
-                    key={index}
-                    href="/"
-                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
+                    key={item.label}
+                    href={item.href}
+                    className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* ABOUT */}
-            <div>
-              <h3 className="xl:text-[32px]  md:text-[25px]  lg:text-[25px] text-[20px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+            <div className="border-t border-black/10 px-0 py-8 md:border-t-0 md:px-8 lg:px-10">
+              <h3 className="text-[20px] font-medium leading-none tracking-[-0.03em] text-black">
                 About
               </h3>
 
-              <div className="mt-6 flex flex-col gap-4">
-                {[
-                  "Blog",
-                ].map((item, index) => (
+              <div className="mt-6 flex flex-col gap-5">
+                {aboutLinks.map((item) => (
                   <Link
-                    key={index}
-                    href="/"
-                    className="text-[15px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
+                    key={item.label}
+                    href={item.href}
+                    className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 ))}
               </div>
@@ -225,54 +232,49 @@ export default function Footer() {
       </div>
 
       {/* DISCLAIMER */}
-      <div className="border-t border-black py-8">
+      <div className="border-b border-black/10 py-4">
         <Container>
-          <div className="max-w-[1280px]">
-            <p className="text-[15px] font-semibold leading-[1.4] tracking-[-0.03em] text-black">
-              Disclaimer:
-            </p>
-
-            <p className="mt-1 text-[14px] leading-[1.45] tracking-[-0.03em] text-black">
-              The logo, name, and graphics of HBOX PAY and its products &
-              services are the trademarks of HBOX PAY company. All other
-              company names, brand names, trademarks, and logos mentioned on
-              this website are the property of their respective owners and do
-              not constitute or imply endorsement, sponsorship or recommendation
-              thereof by HBOX PAY and do not constitute or imply endorsement,
-              sponsorship or recommendation of Branded Web-Studios by the
-              respective trademark owner.
+          <div className="max-w-[1160px]">
+            <p className="text-[12px] leading-[1.4] tracking-[-0.02em] text-black">
+              <span className="font-medium">Disclaimer:</span>
+              <br />
+              The logo, name, and graphics of HBOX PAY and its products and
+              services are the trademarks of HBOX PAY LLC. All other company
+              names, brand names, trademarks, and logos mentioned on this
+              website are the property of their respective owners and do not
+              constitute or imply any endorsement, sponsorship, or
+              recommendation by HBOX PAY LLC. Likewise, the mention of any
+              third-party trademarks or brand names does not constitute or imply
+              endorsement, sponsorship, or recommendation of HBOX PAY LLC by the
+              respective trademark owners.
             </p>
           </div>
         </Container>
       </div>
 
       {/* BOTTOM FOOTER */}
-      <div className="border-t border-black py-6">
+      <div className="py-5">
         <Container>
-          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
-            <p className="text-[14px] leading-[100%] tracking-[-0.03em] text-black">
-              © 2026 HBOX digital, LLC
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-[12px] leading-none tracking-[-0.02em] text-black">
+              © 2026 HBOX Pay
             </p>
-<div className="flex flex-wrap items-center justify-center gap-6">
-  {[
-    {
-      label: "Terms & Conditions",
-      href: "/terms-conditions",
-    },
-    {
-      label: "Privacy Policy",
-      href: "/privacy-policy",
-    },
-  ].map((item, index) => (
-    <Link
-      key={index}
-      href={item.href}
-      className="text-[14px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
-    >
-      {item.label}
-    </Link>
-  ))}
-</div>
+
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <Link
+                href="/terms-conditions"
+                className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+              >
+                Terms & Conditions
+              </Link>
+
+              <Link
+                href="/privacy-policy"
+                className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+              >
+                Privacy Policy
+              </Link>
+            </div>
           </div>
         </Container>
       </div>
