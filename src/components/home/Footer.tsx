@@ -251,23 +251,28 @@ export default function Footer() {
         <Container>
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
             <p className="text-[14px] leading-[100%] tracking-[-0.03em] text-black">
-              © 2026 HBOX Pay, LLC
+              © 2026 HBOX digital, LLC
             </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              {[
-                "Terms & Conditions",
-                "Privacy Policy",
-              ].map((item, index) => (
-                <Link
-                  key={index}
-                  href="/privacy-policy"
-                  className="text-[14px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
+<div className="flex flex-wrap items-center justify-center gap-6">
+  {[
+    {
+      label: "Terms & Conditions",
+      href: "/terms-conditions",
+    },
+    {
+      label: "Privacy Policy",
+      href: "/privacy-policy",
+    },
+  ].map((item, index) => (
+    <Link
+      key={index}
+      href={item.href}
+      className="text-[14px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
+    >
+      {item.label}
+    </Link>
+  ))}
+</div>
           </div>
         </Container>
       </div>

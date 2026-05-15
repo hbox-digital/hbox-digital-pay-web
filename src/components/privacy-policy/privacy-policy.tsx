@@ -149,7 +149,7 @@ export default function PrivacyPolicySection() {
         <div className="mt-14 grid gap-10 lg:grid-cols-[30%_70%]">
           {/* SIDEBAR */}
           <aside className="hidden lg:block">
-            <div className="sticky top-10">
+            <div className="sticky top-20">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
