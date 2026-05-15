@@ -261,7 +261,7 @@ export default function Footer() {
               ].map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href="/privacy-policy"
                   className="text-[14px] leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:text-[#39A935]"
                 >
                   {item}
