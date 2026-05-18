@@ -85,13 +85,14 @@ export default function BookDemoModal({
   };
 
   return (
+    <>
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogOverlay className="bg-black/70" />
-      <DialogContent className="max-w-[90vw] sm:max-w-[600px] p-0 bg-white overflow-hidden border-0 gap-0">
+      <DialogContent className="max-w-[90vw] sm:max-w-[800px] p-0 bg-white overflow-hidden border-0 gap-0">
         {/* Left Image Section */}
         <div className="flex flex-col md:flex-row">
           {/* Left side - Image/Logo */}
-          <div className="relative hidden md:flex md:w-[40%] bg-[url('https://cdn.hboxdigital.com/public/hbox-pay/video/6267593_Business_Pos_3840x2160.mp4')] bg-cover bg-center items-start justify-start p-8">
+          <div className="relative hidden md:flex md:w-[40%] bg-[url('/images/form-image.jpg')] bg-cover bg-center items-start justify-start p-8">
             <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10">
               <div className="flex items-center gap-2">
@@ -249,5 +250,6 @@ export default function BookDemoModal({
         </div>
       </DialogContent>
     </Dialog>
+    </>
   );
 }
