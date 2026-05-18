@@ -10,27 +10,27 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 const hardwareLinks = [
   {
     label: "PAX A920",
-    href: "/hardware/pax-a920",
+    href: "#",
   },
   {
     label: "PAX E700",
-    href: "/hardware/pax-e700",
+    href: "#",
   },
   {
     label: "PAX E800",
-    href: "/hardware/pax-e800",
+    href: "#",
   },
   {
     label: "Kiosk",
-    href: "/hardware/kiosk",
+    href: "#",
   },
   {
     label: "Kitchen Display System",
-    href: "/hardware/kitchen-display-system",
+    href: "#",
   },
   {
     label: "Accessories",
-    href: "/hardware/accessories",
+    href: "#",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function Footer() {
                   href="tel:+16052991570"
                   className="mt-3 inline-block text-[12px] leading-none text-black transition-colors duration-300 hover:text-[#2F7D22]"
                 >
-                  (605) 299-1570
+                +1-605-307-6026
                 </Link>
               </div>
 
@@ -257,7 +257,7 @@ export default function Footer() {
         <Container>
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-[12px] leading-none tracking-[-0.02em] text-black">
-              © 2026 HBOX Pay
+              © 2026 HBOX LLC
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6">

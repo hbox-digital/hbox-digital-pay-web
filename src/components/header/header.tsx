@@ -267,12 +267,12 @@ export default function Header() {
             </div>
 
             {/* SEARCH */}
-            <button
+            {/* <button
               aria-label="Search"
               className="flex items-center justify-center text-black transition-colors duration-300 hover:text-[#45890F]"
             >
               <Search className="h-[16px] w-[16px] stroke-[1.7]" />
-            </button>
+            </button> */}
 
             {/* MOBILE MENU BUTTON */}
             <button
