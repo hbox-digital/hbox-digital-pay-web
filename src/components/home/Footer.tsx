@@ -41,7 +41,7 @@ const helpLinks = [
   },
   {
     label: "FAQ",
-    href: "/faq",
+    href: "/faqs",
   },
   {
     label: "Contact us",

@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     label: "Pricing",
-    href: "#",
+    href: "/contact",
   },
   {
     label: "Services",

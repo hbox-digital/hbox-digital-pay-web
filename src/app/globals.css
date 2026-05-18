@@ -214,3 +214,35 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.article-content strong {
+  color: #000000;
+  font-weight: 600;
+}
+
+.article-content ul {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content li {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 8px;
+}
+
+.article-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #8cee54;
+}
