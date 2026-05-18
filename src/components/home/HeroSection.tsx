@@ -2,13 +2,16 @@
 
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Container from "@/components/Container";
 import { ExternalLink } from "lucide-react";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import BookDemoModal from "@/components/modals/BookDemoModal";
 
 export default function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="overflow-hidden bg-[#Fff] pb-10 pt-6 sm:pb-12 sm:pt-8 md:pb-16 md:pt-10 lg:pb-20">
       <Container>
@@ -73,29 +76,28 @@ export default function HeroSection() {
               }}
               className="flex lg:justify-end"
             >
-              <Link href="/">
-                <motion.button
-                  whileHover={{
-                    scale: 1.03,
-                    y: -2,
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  className="group flex h-[54px] items-center gap-3 rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-6 text-[15px] font-medium tracking-[-0.03em] text-black shadow-[0px_8px_30px_rgba(140,238,84,0.28)] transition-all duration-300 sm:h-[58px] sm:px-7 sm:text-[16px]"
-                >
-                  <span>Book a demo</span>
+              <motion.button
+                onClick={() => setIsModalOpen(true)}
+                whileHover={{
+                  scale: 1.03,
+                  y: -2,
+                }}
+                whileTap={{ scale: 0.97 }}
+                className="group flex h-[54px] items-center gap-3 rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-6 text-[15px] font-medium tracking-[-0.03em] text-black shadow-[0px_8px_30px_rgba(140,238,84,0.28)] transition-all duration-300 sm:h-[58px] sm:px-7 sm:text-[16px]"
+              >
+                <span>Book a demo</span>
 
-                  <motion.div
-                    whileHover={{ rotate: 8 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 260,
-                    }}
-                    className="flex h-[36px] w-[36px] items-center justify-center rounded-full transition-all duration-300 "
-                  >
-                    <ExternalLink className="h-[20px] w-[20px] stroke-[2.2]" />
-                  </motion.div>
-                </motion.button>
-              </Link>
+                <motion.div
+                  whileHover={{ rotate: 8 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                  }}
+                  className="flex h-[36px] w-[36px] items-center justify-center rounded-full transition-all duration-300 "
+                >
+                  <ExternalLink className="h-[20px] w-[20px] stroke-[2.2]" />
+                </motion.div>
+              </motion.button>
             </motion.div>
           </div>
 
@@ -222,6 +224,9 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </Container>
+
+      {/* Book Demo Modal */}
+      <BookDemoModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }
