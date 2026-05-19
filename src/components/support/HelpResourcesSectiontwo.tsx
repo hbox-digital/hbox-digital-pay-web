@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Search } from "lucide-react";
 import Container from "../Container";
+import BookDemoModal from "@/components/modals/BookDemoModal";
 
 const fadeUp = {
   hidden: {
@@ -36,7 +37,9 @@ const supportFeatures = [
   "Business Consultation",
 ];
 
-export default function HelpResourcesSectiontwo () {
+export default function HelpResourcesSectiontwo() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-white py-12 md:py-16">
       <Container>
@@ -51,46 +54,49 @@ export default function HelpResourcesSectiontwo () {
 
           <div className="relative z-10">
             {/* TOP CONTENT */}
-          <motion.div
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.25 }}
-  variants={fadeUp}
-  className="text-center"
->
-  <div className="mx-auto max-w-[820px]">
-    <h2 className="text-[24px] font-light leading-tight tracking-[-0.04em] text-[#171717] md:text-[58px]">
-      How Can{" "}
-      <span className="font-semibold text-[#2F8429]">We Help You?</span>
-    </h2>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25 }}
+              variants={fadeUp}
+              className="text-center"
+            >
+              <div className="mx-auto max-w-[820px]">
+                <h2 className="text-[24px] font-light leading-tight tracking-[-0.04em] text-[#171717] md:text-[58px]">
+                  How Can{" "}
+                  <span className="font-semibold text-[#2F8429]">
+                    We Help You?
+                  </span>
+                </h2>
 
-    <p className="mt-4 text-[11px] leading-[1.45] tracking-[-0.01em] text-[#333333] md:text-[20px]">
-      Find answers, support resources, guides, and troubleshooting information
-      for HBOX Pay products and services.
-    </p>
+                <p className="mt-4 text-[11px] leading-[1.45] tracking-[-0.01em] text-[#333333] md:text-[20px]">
+                  Find answers, support resources, guides, and troubleshooting
+                  information for HBOX Pay products and services.
+                </p>
 
-    <Link
-      href="/contact-sales"
-      className="mt-5 inline-flex h-[42px] items-center justify-center gap-1.5 rounded-full bg-[#A9EF7D] px-4 text-[15px] font-semibold text-black transition duration-300 hover:scale-[1.04] hover:bg-[#9BE96C]"
-    >
-      Talk to Sales
-      <ArrowRight className="h-2.5 w-2.5" />
-    </Link>
-  </div>
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(true)}
+                  className="mt-5 inline-flex h-[42px] items-center justify-center gap-1.5 rounded-full bg-[#A9EF7D] px-4 text-[15px] font-semibold text-black transition duration-300 hover:scale-[1.04] hover:bg-[#9BE96C]"
+                >
+                  Talk to Sales
+                  <ArrowRight className="h-2.5 w-2.5" />
+                </button>
+              </div>
 
-  {/* Search Bar Center */}
-  <div className="mx-auto mt-7 w-full max-w-[1020px] px-4">
-    <div className="flex h-[60px] w-full items-center rounded-full bg-[#F4F4F4] px-5">
-      <Search className="mr-3 h-[28px] w-[28px] shrink-0 text-[#171717]" />
+              {/* Search Bar Center */}
+              <div className="mx-auto mt-7 w-full max-w-[1020px] px-4">
+                <div className="flex h-[60px] w-full items-center rounded-full bg-[#F4F4F4] px-5">
+                  <Search className="mr-3 h-[28px] w-[28px] shrink-0 text-[#171717]" />
 
-      <input
-        type="text"
-        placeholder="Search for guides, support articles, or troubleshooting topics..."
-        className="h-full w-full bg-transparent text-[15px] text-black outline-none placeholder:text-black/35"
-      />
-    </div>
-  </div>
-</motion.div>
+                  <input
+                    type="text"
+                    placeholder="Search for guides, support articles, or troubleshooting topics..."
+                    className="h-full w-full bg-transparent text-[15px] text-black outline-none placeholder:text-black/35"
+                  />
+                </div>
+              </div>
+            </motion.div>
 
             {/* RESOURCE BLOCK */}
             <motion.div
@@ -98,7 +104,7 @@ export default function HelpResourcesSectiontwo () {
               whileInView="visible"
               viewport={{ once: true, amount: 0.25 }}
               variants={fadeUp}
-              className="mx-auto mt-10 grid  items-center gap-8 md:grid-cols-2"
+              className="mx-auto mt-10 grid items-center gap-8 md:grid-cols-2"
             >
               <div className="relative h-[250px] overflow-hidden rounded-[8px] md:h-[570px]">
                 <Image
@@ -148,7 +154,7 @@ export default function HelpResourcesSectiontwo () {
               whileInView="visible"
               viewport={{ once: true, amount: 0.25 }}
               variants={fadeUp}
-              className="mx-auto mt-10 grid  items-center gap-3 md:grid-cols-2"
+              className="mx-auto mt-10 grid items-center gap-3 md:grid-cols-2"
             >
               <div className="max-w-[560px]">
                 <h3 className="text-[22px] font-light leading-[1.05] tracking-[-0.045em] text-[#171717] md:text-[42px]">
@@ -181,14 +187,6 @@ export default function HelpResourcesSectiontwo () {
                     ))}
                   </ul>
                 </div>
-
-                {/* <Link
-                  href="/contact-sales"
-                  className="mt-4 inline-flex h-[20px] items-center justify-center gap-1.5 rounded-full bg-[#A9EF7D] px-3 text-[8px] font-semibold text-black transition duration-300 hover:scale-[1.04] hover:bg-[#9BE96C]"
-                >
-                  Contact Support
-                  <ArrowRight className="h-2.5 w-2.5" />
-                </Link> */}
               </div>
 
               <div className="relative h-[250px] overflow-hidden rounded-[8px] md:h-[570px]">
@@ -203,6 +201,8 @@ export default function HelpResourcesSectiontwo () {
           </div>
         </div>
       </Container>
+
+      <BookDemoModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }

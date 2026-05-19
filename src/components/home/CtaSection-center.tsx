@@ -2,12 +2,15 @@
 
 "use client";
 
+import { useState } from "react";
 import Container from "@/components/Container";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import BookDemoModal from "@/components/modals/BookDemoModal";
 
 export default function CtaSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="overflow-hidden bg-[#Fff] py-8 md:py-10 lg:py-12">
       <Container>
@@ -27,9 +30,6 @@ export default function CtaSection() {
             backgroundPosition: "center",
           }}
         >
-          {/* OVERLAY */}
-          {/* <div className="absolute inset-0 bg-black/30" /> */}
-
           {/* CONTENT */}
           <div className="relative z-10 mx-auto flex max-w-[980px] flex-col items-center text-center">
             <motion.h2
@@ -43,9 +43,7 @@ export default function CtaSection() {
               className="text-[42px] font-light leading-[100%] tracking-[-0.04em] text-white sm:text-[52px] md:text-[40px] md:leading-[74px]"
             >
               Start Growing Your Business{" "}
-              <span className="font-semibold">
-                with HBOXPay
-              </span>
+              <span className="font-semibold">with HBOXPay</span>
             </motion.h2>
 
             <motion.p
@@ -64,28 +62,28 @@ export default function CtaSection() {
             </motion.p>
 
             {/* BUTTON */}
-            <Link href="/" className="mt-8">
-              <motion.button
-                whileHover={{
-                  scale: 1.03,
-                  y: -2,
-                }}
-                whileTap={{ scale: 0.96 }}
-                transition={{
-                  duration: 0.25,
-                }}
-                className="group flex h-[46px] items-center gap-[10px] rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-6 text-[14px] font-medium leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.02] sm:h-[50px] sm:px-7 sm:text-[16px]"
-              >
-                <span>Get Started Today</span>
+            <motion.button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              whileHover={{
+                scale: 1.03,
+                y: -2,
+              }}
+              whileTap={{ scale: 0.96 }}
+              transition={{
+                duration: 0.25,
+              }}
+              className="group mt-8 flex h-[46px] items-center gap-[10px] rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-6 text-[14px] font-medium leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.02] sm:h-[50px] sm:px-7 sm:text-[16px]"
+            >
+              <span>Get Started Today</span>
 
-                <motion.div
-                  whileHover={{ rotate: 45 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <ArrowUpRight className="h-[18px] w-[18px] stroke-[2.2]" />
-                </motion.div>
-              </motion.button>
-            </Link>
+              <motion.div
+                whileHover={{ rotate: 45 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ArrowUpRight className="h-[18px] w-[18px] stroke-[2.2]" />
+              </motion.div>
+            </motion.button>
           </div>
 
           {/* SOFT FLOATING GLOW */}
@@ -116,6 +114,9 @@ export default function CtaSection() {
           />
         </motion.div>
       </Container>
+
+      {/* Book Demo Modal */}
+      <BookDemoModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }

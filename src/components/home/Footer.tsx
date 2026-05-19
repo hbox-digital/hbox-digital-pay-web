@@ -22,11 +22,11 @@ const hardwareLinks = [
   },
   {
     label: "Kiosk",
-    href: "#",
+    href: "/products/self-order-kiosk",
   },
   {
     label: "Kitchen Display System",
-    href: "#",
+    href: "/products/kitchen-display-system",
   },
   {
     label: "Accessories",
@@ -83,7 +83,7 @@ export default function Footer() {
                 />
               </Link>
 
-              <p className="mt-4 max-w-[260px] text-[13px] leading-[1.55] tracking-[-0.02em] text-black">
+              <p className="mt-4 max-w-[460px] text-[16px] leading-[1.55] tracking-[-0.02em] text-black">
                 Accept payments, manage sales, track performance, and simplify
                 business operations with one connected POS and payment platform
                 built for modern businesses.
@@ -120,7 +120,7 @@ export default function Footer() {
                 <p className="mt-3 max-w-[250px] text-[12px] leading-[1.45] tracking-[-0.02em] text-black">
                   11 Apex Dr Suite 300-A, Marlborough,
                   <br />
-                  MA01752, United States
+                  MA 01752, United States
                 </p>
               </div>
 
@@ -238,15 +238,7 @@ export default function Footer() {
             <p className="text-[12px] leading-[1.4] tracking-[-0.02em] text-black">
               <span className="font-medium">Disclaimer:</span>
               <br />
-              The logo, name, and graphics of HBOX PAY and its products and
-              services are the trademarks of HBOX PAY LLC. All other company
-              names, brand names, trademarks, and logos mentioned on this
-              website are the property of their respective owners and do not
-              constitute or imply any endorsement, sponsorship, or
-              recommendation by HBOX PAY LLC. Likewise, the mention of any
-              third-party trademarks or brand names does not constitute or imply
-              endorsement, sponsorship, or recommendation of HBOX PAY LLC by the
-              respective trademark owners.
+              The logo, name, and graphics of HBOX PAY and its products and services are the trademarks of HBOX LLC. All other company names, brand names, trademarks, and logos mentioned on this website are the property of their respective owners and do not constitute or imply any endorsement, sponsorship, or recommendation by HBOX LLC. Likewise, the mention of any third-party trademarks or brand names does not constitute or imply endorsement, sponsorship, or recommendation of HBOX LLC by the respective trademark owners.
             </p>
           </div>
         </Container>
