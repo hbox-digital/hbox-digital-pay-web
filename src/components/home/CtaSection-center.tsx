@@ -77,7 +77,9 @@ export default function CtaSection() {
               className="font-inter text-fluid-h2 font-light text-white"
             >
               Start Growing Your Business{" "}
-              <span className="font-semibold text-[#A3EC6B]">with HBOXPay</span>
+              <span className="font-semibold text-[#A3EC6B]">
+                with HBOXPay
+              </span>
             </motion.h2>
 
             <motion.p
