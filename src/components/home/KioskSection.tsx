@@ -2,11 +2,59 @@
 
 "use client";
 
-import Container from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
+
+import Container from "@/components/Container";
+
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const fadeLeft = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease,
+    },
+  },
+} satisfies Variants;
+
+const fadeRight = {
+  hidden: {
+    opacity: 0,
+    x: 60,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.9,
+      ease,
+    },
+  },
+} satisfies Variants;
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 25,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease,
+    },
+  },
+} satisfies Variants;
 
 export default function KioskSection() {
   return (
@@ -15,79 +63,82 @@ export default function KioskSection() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
           {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-            }}
+            variants={fadeLeft}
             className="lg:col-span-4"
           >
             <div className="max-w-[420px]">
               <motion.h2
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
+                variants={fadeUp}
                 transition={{
                   duration: 0.7,
                   delay: 0.1,
+                  ease,
                 }}
-                className="text-[42px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[52px] md:text-[50px] md:leading-[58px] md:text-[60px] md:leading-[68px]"
+                className="font-inter text-fluid-h2 font-light text-black"
               >
-                <span className="font-semibold text-[#39A935]">
-                  Kiosk
-                </span>
+                <span className="font-semibold text-[#39A935]">Kiosk</span>
                 <br />
                 Self Ordering for Restaurants
               </motion.h2>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
+                variants={fadeUp}
                 transition={{
                   duration: 0.7,
                   delay: 0.2,
+                  ease,
                 }}
-                className="mt-6 max-w-[360px] md:text-[20px] leading-[1.5] tracking-[-0.03em] text-black/70 sm:text-[16px]"
+                className="mt-6 max-w-[360px] font-inter text-fluid-body font-normal tracking-[-0.03em] text-black/70"
               >
                 Speed up ordering with a self service kiosk built for
-                restaurants, featuring fast payments, smooth ordering flows,
-                and a simple customer experience.
+                restaurants, featuring fast payments, smooth ordering flows, and
+                a simple customer experience.
               </motion.p>
 
-              <Link href="/products/self-order-kiosk" className="mt-8 inline-flex">
-                <motion.button
-                  whileHover={{
-                    scale: 1.03,
-                    y: -2,
-                  }}
-                  whileTap={{ scale: 0.96 }}
-                  className="group flex h-[42px] items-center gap-[10px] rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-5 text-[13px] font-medium leading-[100%] tracking-[-0.03em] text-black transition-all duration-300 hover:scale-[1.02]"
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.3,
+                  ease,
+                }}
+                className="mt-8"
+              >
+                <Link
+                  href="/products/self-order-kiosk"
+                  className="group inline-flex h-[42px] items-center gap-[10px] rounded-full bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)] px-5 text-fluid-button font-medium text-black transition-all duration-300 hover:scale-[1.03]"
                 >
-                  <span> Explore Service Solutions</span>
+                  <span>Explore Service Solutions</span>
 
-                  <motion.div
+                  <motion.span
                     whileHover={{ rotate: 45 }}
                     transition={{ duration: 0.3 }}
                   >
                     <ArrowUpRight className="h-[16px] w-[16px] stroke-[2.2]" />
-                  </motion.div>
-                </motion.button>
-              </Link>
+                  </motion.span>
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* RIGHT IMAGE */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.9,
-              ease: "easeOut",
-            }}
+            variants={fadeRight}
             className="lg:col-span-8"
           >
             <motion.div
@@ -96,6 +147,7 @@ export default function KioskSection() {
               }}
               transition={{
                 duration: 0.4,
+                ease,
               }}
               className="relative h-[320px] w-full sm:h-[420px] md:h-[520px] lg:h-[620px]"
             >
@@ -103,6 +155,7 @@ export default function KioskSection() {
                 src="https://cdn.hboxdigital.com/public/hbox-pay/images/image%20955.png"
                 alt="Kiosk"
                 fill
+                sizes="(max-width: 1024px) 100vw, 66vw"
                 className="object-contain"
                 priority
               />

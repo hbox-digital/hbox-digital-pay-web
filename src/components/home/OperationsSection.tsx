@@ -2,26 +2,68 @@
 
 "use client";
 
-import Container from "@/components/Container";
 import Image from "next/image";
-import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  ExternalLink,
-} from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
+
+import Container from "@/components/Container";
+
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const fadeLeft = {
+  hidden: {
+    opacity: 0,
+    x: -60,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease,
+    },
+  },
+} satisfies Variants;
+
+const fadeRight = {
+  hidden: {
+    opacity: 0,
+    x: 60,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease,
+    },
+  },
+} satisfies Variants;
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 35,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease,
+    },
+  },
+} satisfies Variants;
 
 const featureCards = [
   {
-    title: "Fast & Secure\nPayments ",
+    title: "Fast & Secure\nPayments",
     description:
       "Process transactions quickly with secure payment technology built for everyday business operations.",
     image:
       "https://cdn.hboxdigital.com/public/hbox-pay/images/image%20947.png",
   },
   {
-    title: "Real Time\nInsights ",
+    title: "Real Time\nInsights",
     description:
       "Monitor sales, business activity, and performance with live reporting from anywhere.",
     image:
@@ -31,18 +73,15 @@ const featureCards = [
 
 export default function OperationsSection() {
   return (
-    <section className="bg-white py-8 md:py-10 lg:py-12 overflow-hidden">
+    <section className="overflow-hidden bg-white py-8 md:py-10 lg:py-12">
       <Container>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
           {/* LEFT SIDE */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-            }}
+            variants={fadeLeft}
             className="lg:col-span-5"
           >
             {/* TOP CONTENT */}
@@ -54,8 +93,9 @@ export default function OperationsSection() {
                 transition={{
                   duration: 0.7,
                   delay: 0.1,
+                  ease,
                 }}
-                className="text-[30px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[30px] md:text-[50px] md:leading-[50px]"
+                className="font-inter text-fluid-h2 font-light text-black"
               >
                 Built by the Team
                 <br />
@@ -71,60 +111,29 @@ export default function OperationsSection() {
                 transition={{
                   duration: 0.7,
                   delay: 0.2,
+                  ease,
                 }}
-                className="mt-5 max-w-full text-[20px] leading-[1.5] tracking-[-0.03em] text-black sm:text-[16px]"
+                className="mt-5 max-w-full font-inter text-fluid-body font-normal tracking-[-0.03em] text-black"
               >
                 From payment systems to custom software and mobile applications,
                 HBOX Digital builds technology solutions that help businesses
                 operate smarter and scale faster.
               </motion.p>
-
-              {/* ARROWS */}
-              {/* <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.3,
-                }}
-                className="mt-7 flex items-center gap-3"
-              >
-                <motion.button
-                  whileHover={{
-                    scale: 1.08,
-                    y: -2,
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] bg-black text-white"
-                >
-                  <ArrowLeft className="h-[18px] w-[18px]" />
-                </motion.button>
-
-                <motion.button
-                  whileHover={{
-                    scale: 1.08,
-                    y: -2,
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] bg-black text-white"
-                >
-                  <ArrowRight className="h-[18px] w-[18px]" />
-                </motion.button>
-              </motion.div> */}
             </div>
 
             {/* SMALL CARDS */}
-            <div className="mt-8 md:mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-16">
               {featureCards.map((card, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 45 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                <motion.article
+                  key={card.title}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={fadeUp}
                   transition={{
                     duration: 0.7,
                     delay: index * 0.1,
+                    ease,
                   }}
                   whileHover={{
                     y: -5,
@@ -136,60 +145,47 @@ export default function OperationsSection() {
                     whileHover={{
                       scale: 1.02,
                     }}
-                    className="relative mb-5 h-[150px] overflow-hidden rounded-[18px] bg-[#fff]"
+                    transition={{
+                      duration: 0.35,
+                    }}
+                    className="relative mb-5 h-[150px] overflow-hidden rounded-[18px] bg-white"
                   >
                     <Image
                       src={card.image}
-                      alt={card.title}
+                      alt={card.title.replace("\n", " ")}
                       fill
-                      className="object-contain w-full transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                      className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </motion.div>
 
                   {/* CONTENT */}
-                  <h3 className="whitespace-pre-line text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-black">
+                  <h3 className="font-inter text-fluid-subtitle font-semibold text-black ">
                     {card.title}
                   </h3>
 
-                  <p className="mt-4 md:mt-10 max-w-[200px] text-[20px] leading-[1.45] tracking-[-0.03em] text-black">
+                  <p className="mt-4   md:mb-0 font-inter text-fluid-body font-normal  text-black/70">
                     {card.description}
                   </p>
-
-                  {/* BUTTON */}
-                  {/* <Link
-                    href="/"
-                    className="absolute bottom-4 right-4"
-                  >
-                    <motion.button
-                      whileHover={{
-                        scale: 1.08,
-                        rotate: 3,
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex h-[46px] w-[46px] items-center justify-center rounded-[16px] bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)]"
-                    >
-                      <ExternalLink className="h-[20px] w-[20px] stroke-[2.2] text-black" />
-                    </motion.button>
-                  </Link> */}
-                </motion.div>
+                </motion.article>
               ))}
             </div>
           </motion.div>
 
           {/* RIGHT SIDE */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-            }}
+            variants={fadeRight}
             className="lg:col-span-7"
           >
-            <motion.div
+            <motion.article
               whileHover={{
                 y: -4,
+              }}
+              transition={{
+                duration: 0.35,
               }}
               className="flex h-full flex-col overflow-hidden rounded-[28px] bg-[#F5F5F5] p-4 md:p-5"
             >
@@ -198,18 +194,22 @@ export default function OperationsSection() {
                 whileHover={{
                   scale: 1.01,
                 }}
-                className="relative h-[320px] overflow-hidden rounded-[24px] bg-[#Fff] sm:h-[420px] lg:h-[520px]"
+                transition={{
+                  duration: 0.35,
+                }}
+                className="relative h-[320px] overflow-hidden rounded-[24px] bg-white sm:h-[420px] lg:h-[520px]"
               >
                 <Image
                   src="https://cdn.hboxdigital.com/public/hbox-pay/images/image%20945.png"
                   alt="Offline Mode"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-contain p-5 transition-transform duration-700 hover:scale-105"
                 />
               </motion.div>
 
               {/* CONTENT */}
-              <div className="flex items-end justify-between gap-5 pt-6">
+              <div className="flex flex-col gap-5 pt-6 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <motion.h3
                     initial={{ opacity: 0, y: 15 }}
@@ -218,8 +218,9 @@ export default function OperationsSection() {
                     transition={{
                       duration: 0.6,
                       delay: 0.2,
+                      ease,
                     }}
-                    className="text-[38px] font-semibold leading-[100%] tracking-[-0.04em] text-black sm:text-[48px]"
+                    className="font-inter text-fluid-subtitle font-semibold text-black"
                   >
                     Offline Mode
                   </motion.h3>
@@ -231,28 +232,16 @@ export default function OperationsSection() {
                     transition={{
                       duration: 0.7,
                       delay: 0.3,
+                      ease,
                     }}
-                    className="mt-4 max-w-[520px] text-[15px] md:text-[20px] leading-[1.45] tracking-[-0.03em] text-black/70 sm:text-[12px]"
+                    className="mt-4 max-w-[520px] font-inter text-fluid-body font-normal tracking-[-0.03em] text-black/70"
                   >
                     Keep accepting payments and managing sales even during
                     internet interruptions.
                   </motion.p>
                 </div>
-
-                {/* <Link href="/">
-                  <motion.button
-                    whileHover={{
-                      scale: 1.08,
-                      rotate: 3,
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[20px] bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)]"
-                  >
-                    <ExternalLink className="h-[22px] w-[22px] stroke-[2.2] text-black" />
-                  </motion.button>
-                </Link> */}
               </div>
-            </motion.div>
+            </motion.article>
           </motion.div>
         </div>
       </Container>

@@ -246,3 +246,167 @@ html {
   border-radius: 999px;
   background: #8cee54;
 }
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    overflow-x: hidden;
+    font-size: clamp(14px, 0.35vw + 13px, 16px);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    font-size: clamp(14px, 0.35vw + 13px, 16px);
+    line-height: 1.5;
+  }
+
+  button,
+  input,
+  textarea,
+  select,
+  a {
+    font-family: inherit;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+}
+
+/* ================================
+   Font Helpers
+   ================================ */
+
+.font-inter {
+  font-family: var(--font-sans);
+}
+
+/* ================================
+   HBOX Pay Fluid Typography
+   Use these classes in components
+   ================================ */
+
+.text-fluid-hero {
+  font-size: clamp(2.625rem, 5vw, 3.75rem); /* 42px - 60px */
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.text-fluid-h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.text-fluid-h3 {
+  font-size: clamp(1.5rem, 2.7vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.text-fluid-subtitle {
+  font-size: clamp(1.0625rem, 2vw, 1.75rem); /* 17px - 28px */
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+}
+
+.text-fluid-body {
+  font-size: clamp(0.95rem, 0.55vw + 0.78rem, 1.2rem);
+  line-height: 1.55;
+}
+
+.text-fluid-small {
+  font-size: clamp(0.75rem, 0.35vw + 0.68rem, 0.9rem);
+  line-height: 1.45;
+}
+
+.text-fluid-button {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.text-fluid-card {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* ================================
+   Marquee Animation
+   ================================ */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* ================================
+   Scrollbar Utilities
+   ================================ */
+
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar,
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ================================
+   Article Content Styling
+   ================================ */
+
+.article-content strong {
+  color: #000000;
+  font-weight: 600;
+}
+
+.article-content ul {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content li {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 8px;
+}
+
+.article-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #8cee54;
+}

@@ -90,13 +90,13 @@ export default function Footer() {
               </p>
 
               <div className="mt-7">
-                <h4 className="text-[15px] font-semibold leading-none text-black">
+                <h4 className="text-[20px] font-semibold leading-none text-black">
                   Contact Us
                 </h4>
 
                 <Link
                   href="tel:+16052991570"
-                  className="mt-3 inline-block text-[12px] leading-none text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                  className="mt-3 inline-block text-[16px] leading-none text-black transition-colors duration-300 hover:text-[#2F7D22]"
                 >
                 +1-605-307-6026
                 </Link>
@@ -112,12 +112,12 @@ export default function Footer() {
                     className="h-[30px] w-[30px] object-contain"
                   />
 
-                  <h4 className="text-[15px] font-semibold leading-none text-black">
+                  <h4 className="text-[20px] font-semibold leading-none text-black">
                     United States
                   </h4>
                 </div>
 
-                <p className="mt-3 max-w-[250px] text-[12px] leading-[1.45] tracking-[-0.02em] text-black">
+                <p className="mt-3  text-[16px] leading-[1.45] tracking-[-0.02em] text-black">
                   11 Apex Dr Suite 300-A, Marlborough,
                   <br />
                   MA 01752, United States
@@ -182,7 +182,7 @@ export default function Footer() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                    className="text-[16px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
                   >
                     {item.label}
                   </Link>
@@ -201,7 +201,7 @@ export default function Footer() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                    className="text-[16px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
                   >
                     {item.label}
                   </Link>
@@ -220,7 +220,7 @@ export default function Footer() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                    className="text-[16px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
                   >
                     {item.label}
                   </Link>
@@ -234,8 +234,8 @@ export default function Footer() {
       {/* DISCLAIMER */}
       <div className="border-b border-black/10 py-4">
         <Container>
-          <div className="max-w-[1160px]">
-            <p className="text-[12px] leading-[1.4] tracking-[-0.02em] text-black">
+          <div className="">
+            <p className="text-[16px] leading-[1.4] tracking-[-0.02em] text-black">
               <span className="font-medium">Disclaimer:</span>
               <br />
               The logo, name, and graphics of HBOX PAY and its products and services are the trademarks of HBOX LLC. All other company names, brand names, trademarks, and logos mentioned on this website are the property of their respective owners and do not constitute or imply any endorsement, sponsorship, or recommendation by HBOX LLC. Likewise, the mention of any third-party trademarks or brand names does not constitute or imply endorsement, sponsorship, or recommendation of HBOX LLC by the respective trademark owners.
@@ -248,21 +248,21 @@ export default function Footer() {
       <div className="py-5">
         <Container>
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-[12px] leading-none tracking-[-0.02em] text-black">
+            <p className="text-[15px] leading-none tracking-[-0.02em] text-black">
               © 2026 HBOX LLC
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6">
               <Link
                 href="/terms-conditions"
-                className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                className="text-[15px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
               >
                 Terms & Conditions
               </Link>
 
               <Link
                 href="/privacy-policy"
-                className="text-[12px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
+                className="text-[15px] leading-none tracking-[-0.02em] text-black transition-colors duration-300 hover:text-[#2F7D22]"
               >
                 Privacy Policy
               </Link>

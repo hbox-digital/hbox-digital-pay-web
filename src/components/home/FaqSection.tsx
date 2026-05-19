@@ -2,10 +2,28 @@
 
 "use client";
 
-import Container from "@/components/Container";
-import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Minus, Plus } from "lucide-react";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
+
+import Container from "@/components/Container";
+
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 35,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease,
+    },
+  },
+} satisfies Variants;
 
 const faqs = [
   {
@@ -19,26 +37,22 @@ const faqs = [
       "HBOXPay is designed for restaurants, retail stores, cafes, grocery stores, salons, and service based businesses looking to simplify operations, manage sales, and accept secure payments.",
   },
   {
-    question:
-      "Does HBOXPay support card, QR, and contactless payments?",
+    question: "Does HBOXPay support card, QR, and contactless payments?",
     answer:
       "Yes, HBOXPay supports card payments, QR payments, tap to pay, contactless transactions, and digital wallets for faster and more flexible payment processing.",
   },
   {
-    question:
-      "Can HBOXPay manage inventory and multiple store locations?",
+    question: "Can HBOXPay manage inventory and multiple store locations?",
     answer:
       "HBOXPay includes inventory management and multi store management tools that help businesses track stock, monitor sales, and manage operations across different locations.",
   },
   {
-    question:
-      "Is HBOXPay suitable for small businesses and growing brands?",
+    question: "Is HBOXPay suitable for small businesses and growing brands?",
     answer:
       "Yes, HBOXPay is built for startups, small businesses, and growing brands that need scalable POS software, payment solutions, and business management tools.",
   },
   {
-    question:
-      "How long does it take to set up HBOXPay POS hardware and software?",
+    question: "How long does it take to set up HBOXPay POS hardware and software?",
     answer:
       "Most HBOXPay systems can be set up quickly with guided onboarding, allowing businesses to start accepting payments and managing operations with minimal downtime.",
   },
@@ -48,28 +62,23 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((currentIndex) => (currentIndex === index ? null : index));
   };
 
   return (
-    <section className="overflow-hidden bg-[#Fff] py-6 md:py-8 lg:py-8">
+    <section className="overflow-hidden bg-white py-6 md:py-8 lg:py-10">
       <Container>
-        <div className="mx-auto max-w-[1200px]">
+        <div className="mx-auto">
           {/* HEADING */}
           <motion.h2
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-            }}
-            className="text-center text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[60px] md:leading-[68px]"
+            variants={fadeUp}
+            className="text-center font-inter text-fluid-hero font-light text-black"
           >
             Frequently Asked{" "}
-            <span className="font-semibold text-[#39A935]">
-              Questions
-            </span>
+            <span className="font-semibold text-[#39A935]">Questions</span>
           </motion.h2>
 
           {/* FAQ LIST */}
@@ -79,13 +88,23 @@ export default function FaqSection() {
 
               return (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  key={faq.question}
+                  initial={{
+                    opacity: 0,
+                    y: 30,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.2,
+                  }}
                   transition={{
                     duration: 0.6,
                     delay: index * 0.08,
+                    ease,
                   }}
                   whileHover={{
                     y: -2,
@@ -93,19 +112,22 @@ export default function FaqSection() {
                   className="overflow-hidden rounded-[18px] bg-[#F5F5F5]"
                 >
                   <button
+                    type="button"
                     onClick={() => toggleFaq(index)}
-                    className="flex w-full items-center justify-between gap-5 px-6 py-5 text-left transition-all duration-300"
+                    aria-expanded={isOpen}
+                    className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left transition-all duration-300 sm:px-6"
                   >
-                    <span className="text-[15px] font-medium leading-[1.4] tracking-[-0.03em] text-black sm:text-[16px] md:text-[18px]">
+                    <span className="font-inter text-fluid-body font-medium tracking-[-0.03em] text-black">
                       {faq.question}
                     </span>
 
-                    <motion.div
+                    <motion.span
                       animate={{
                         rotate: isOpen ? 180 : 0,
                       }}
                       transition={{
                         duration: 0.25,
+                        ease,
                       }}
                       className="shrink-0"
                     >
@@ -114,7 +136,7 @@ export default function FaqSection() {
                       ) : (
                         <Plus className="h-[18px] w-[18px] text-black/70" />
                       )}
-                    </motion.div>
+                    </motion.span>
                   </button>
 
                   <AnimatePresence initial={false}>
@@ -139,15 +161,22 @@ export default function FaqSection() {
                         className="overflow-hidden"
                       >
                         <motion.div
-                          initial={{ y: -10 }}
-                          animate={{ y: 0 }}
-                          exit={{ y: -10 }}
+                          initial={{
+                            y: -10,
+                          }}
+                          animate={{
+                            y: 0,
+                          }}
+                          exit={{
+                            y: -10,
+                          }}
                           transition={{
                             duration: 0.25,
+                            ease,
                           }}
-                          className="px-6 pb-5"
+                          className="px-5 pb-5 sm:px-6"
                         >
-                          <p className="max-w-[900px] text-[14px] leading-[1.6] tracking-[-0.03em] text-black/65 sm:text-[15px]">
+                          <p className="max-w-[900px] font-inter text-fluid-small font-normal tracking-[-0.03em] text-black/65">
                             {faq.answer}
                           </p>
                         </motion.div>

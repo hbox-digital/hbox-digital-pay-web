@@ -105,7 +105,7 @@ export default function FaqSectionreuse({
                   className="
                     overflow-hidden
                     rounded-[18px]
-                    bg-[#ECECEC]
+                    bg-[#F5F5F5]
                   "
                 >
                   {/* QUESTION */}

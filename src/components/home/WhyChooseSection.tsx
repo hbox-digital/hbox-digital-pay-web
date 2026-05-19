@@ -2,16 +2,41 @@
 
 "use client";
 
-import Container from "@/components/Container";
 import {
-  MonitorSmartphone,
-  Network,
   Banknote,
   LifeBuoy,
+  MonitorSmartphone,
+  Network,
+  type LucideIcon,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const features = [
+import Container from "@/components/Container";
+
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 35,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease,
+    },
+  },
+} satisfies Variants;
+
+const features: FeatureItem[] = [
   {
     title: "Easy to Use",
     description:
@@ -40,24 +65,19 @@ const features = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="overflow-hidden bg-[#Fff] py-12 md:py-16 lg:py-24">
+    <section className="overflow-hidden bg-white py-12 md:py-16 lg:py-24">
       <Container>
         <div className="flex flex-col items-center">
           {/* HEADING */}
           <motion.h2
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-            }}
-            className="text-center text-[38px] font-light leading-[100%] tracking-[-0.04em] text-black sm:text-[48px] md:text-[60px] md:leading-[68px]"
+            variants={fadeUp}
+            className="max-w-[980px] text-center font-inter text-fluid-hero font-light text-black"
           >
             Why Businesses Choose{" "}
-            <span className="font-semibold text-[#39A935]">
-              HBOXPay
-            </span>
+            <span className="font-semibold text-[#39A935]">HBOXPay</span>
           </motion.h2>
 
           {/* CARDS */}
@@ -66,19 +86,29 @@ export default function WhyChooseSection() {
               const Icon = feature.icon;
 
               return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 45 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                <motion.article
+                  key={feature.title}
+                  initial={{
+                    opacity: 0,
+                    y: 45,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.2,
+                  }}
                   transition={{
                     duration: 0.7,
                     delay: index * 0.1,
+                    ease,
                   }}
                   whileHover={{
                     y: -6,
                   }}
-                  className="rounded-[24px] bg-[#F5F5F5] p-6 transition-all duration-300 hover:-translate-y-1"
+                  className="rounded-[24px] bg-[#F5F5F5] p-6 transition-all duration-300"
                 >
                   {/* ICON */}
                   <motion.div
@@ -88,6 +118,7 @@ export default function WhyChooseSection() {
                     }}
                     transition={{
                       duration: 0.3,
+                      ease,
                     }}
                     className="flex h-[56px] w-[56px] items-center justify-center rounded-[16px] bg-[linear-gradient(178.88deg,#8CEE54_-38.35%,#FFFFFF_285.31%)]"
                   >
@@ -96,31 +127,43 @@ export default function WhyChooseSection() {
 
                   {/* CONTENT */}
                   <motion.h3
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{
+                      opacity: 0,
+                      y: 12,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
                     viewport={{ once: true }}
                     transition={{
                       duration: 0.5,
-                      delay: 0.15,
+                      delay: 0.15 + index * 0.05,
+                      ease,
                     }}
-                    className="mt-10 text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-black"
+                    className="mt-10 font-inter text-fluid-subtitle font-semibold text-black"
                   >
                     {feature.title}
                   </motion.h3>
 
                   <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{
+                      opacity: 0,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                    }}
                     viewport={{ once: true }}
                     transition={{
                       duration: 0.6,
-                      delay: 0.2,
+                      delay: 0.2 + index * 0.05,
+                      ease,
                     }}
-                    className="mt-4 text-[15px] leading-[1.45] tracking-[-0.03em] text-black/70"
+                    className="mt-4 font-inter text-fluid-body font-normal tracking-[-0.03em] text-black/70"
                   >
                     {feature.description}
                   </motion.p>
-                </motion.div>
+                </motion.article>
               );
             })}
           </div>

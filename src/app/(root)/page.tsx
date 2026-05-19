@@ -25,7 +25,8 @@ const page = () => {
         paragraph="From payment systems to custom software and mobile applications, HBOX Digital builds technology solutions that help businesses operate smarter and scale faster."
         imageSrc="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624993.png"
         sideImageSrc="https://cdn.hboxdigital.com/public/hbox-pay/images/Phone%20-%20Mockup%20-%20IV%20(1).png"
-        buttons={[{ text: "Explore HBOX Digital" }]}
+        buttons={[{ text: "Explore HBOX Digital", href: "https://hboxdigital.com" }]}
+        
       />
       <OperationsSection />
       <BusinessTypesSection />
