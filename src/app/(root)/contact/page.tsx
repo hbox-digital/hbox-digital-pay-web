@@ -1,3 +1,4 @@
+import CheckoutExperienceSection from "@/components/contact-us/CheckoutExperienceSection";
 import CtaBannerSection from "@/components/contact-us/CtaBannerSection";
 import FaqSectionreuse from "@/components/contact-us/FaqSectionreuse";
 import HeroSectionContact from "@/components/contact-us/hero-sec";
@@ -23,6 +24,7 @@ const page = () => {
   buttonText="Get Started"
   buttonHref="/contact"
 />
+<CheckoutExperienceSection />
 <InfoSplitSection
   title="Sales & "
   highlightText="Business Solutions"

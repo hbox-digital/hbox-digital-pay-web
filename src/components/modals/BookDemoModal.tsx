@@ -93,27 +93,27 @@ export default function BookDemoModal({
           <div className="flex flex-col md:flex-row">
             {/* Left side - Image/Logo */}
             <div className="relative hidden items-start justify-start bg-[url('/images/form-image.jpg')] bg-cover bg-center p-8 md:flex md:w-[40%]">
-  <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/40" />
 
-  <div className="relative z-10">
-    <img
-      src="https://cdn.hboxdigital.com/public/hbox-pay/images/contact-sales/HBOX%20Pay%20logo%20(1).png"
-      alt="HBOX Pay Logo"
-      className="h-auto w-[130px] object-contain"
-    />
-  </div>
-</div>
+              <div className="relative z-10">
+                <img
+                  src="https://cdn.hboxdigital.com/public/hbox-pay/images/contact-sales/HBOX%20Pay%20logo%20(1).png"
+                  alt="HBOX Pay Logo"
+                  className="h-auto w-[130px] object-contain"
+                />
+              </div>
+            </div>
 
             {/* Right side - Form */}
             <div className="flex-1 p-6 sm:p-8 relative">
               {/* Close button */}
-              <button
+              {/* <button
                 onClick={() => onOpenChange(false)}
                 className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 disabled:pointer-events-none"
               >
                 <X className="h-5 w-5" />
                 <span className="sr-only">Close</span>
-              </button>
+              </button> */}
 
               <DialogHeader className="mb-6">
                 <DialogTitle className="text-2xl sm:text-3xl font-normal text-left">
