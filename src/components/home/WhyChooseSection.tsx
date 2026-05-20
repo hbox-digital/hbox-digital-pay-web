@@ -77,7 +77,7 @@ export default function WhyChooseSection() {
             className="max-w-[980px] text-center font-inter text-fluid-hero font-light text-black"
           >
             Why Businesses Choose{" "}
-            <span className="font-semibold text-[#39A935]">HBOXPay</span>
+            <span className="font-semibold text-[#39A935]">hbox pay</span>
           </motion.h2>
 
           {/* CARDS */}

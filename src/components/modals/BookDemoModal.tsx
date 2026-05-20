@@ -230,10 +230,7 @@ export default function BookDemoModal({
                     htmlFor="consent"
                     className="text-xs  text-black font-normal leading-relaxed cursor-pointer"
                   >
-                    By submitting this form, you agree to receive support and
-                    informational text messages from HBOX LLC at your number.
-                    [10:06 PM]replace HBOX Pay LLC with "HBOX LLC" for the
-                    entire website
+                   By submitting this form, you agree to receive support and informational text messages from HBOX LLC at your number.
                   </Label>
                 </div>
                 <div>

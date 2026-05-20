@@ -56,11 +56,11 @@ export default function TermsAndConditionsSection() {
 
           <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-black/70">
             <p>
-              Welcome to HBOXPay. These Terms and Conditions (“Terms”)
+              Welcome to hbox pay. These Terms and Conditions (“Terms”)
               govern your access to and use of the website located at
-              https://HBOXpay.com (the “Website”), including all software,
+              https://hbox pay.com (the “Website”), including all software,
               applications, point-of-sale (POS) systems, payment solutions,
-              and related services provided by HBOXPay (collectively, the
+              and related services provided by hbox pay (collectively, the
               “Services”).
             </p>
 
@@ -159,7 +159,7 @@ export default function TermsAndConditionsSection() {
 
               <div className="mt-5 space-y-5 text-[15px] leading-relaxed text-black/70">
                 <p>
-                  HBOXPay provides cloud-based POS software and
+                  hbox pay provides cloud-based POS software and
                   payment-related business solutions, including but not
                   limited to:
                 </p>
@@ -230,7 +230,7 @@ export default function TermsAndConditionsSection() {
                 </div>
 
                 <p>
-                  HBOXPay shall not be liable for any loss or damage
+                  hbox pay shall not be liable for any loss or damage
                   resulting from unauthorized use of your account.
                 </p>
               </div>
@@ -251,7 +251,7 @@ export default function TermsAndConditionsSection() {
 
               <div className="mt-5 space-y-5 text-[15px] leading-relaxed text-black/70">
                 <p>
-                  Subject to compliance with these Terms, HBOXPay grants
+                  Subject to compliance with these Terms, hbox pay grants
                   you a limited, non-exclusive, non-transferable,
                   revocable license to access and use the Services solely
                   for lawful internal business purposes.
@@ -384,7 +384,7 @@ export default function TermsAndConditionsSection() {
                 </ul>
 
                 <p>
-                  HBOXPay reserves the right to investigate and take
+                  hbox pay reserves the right to investigate and take
                   appropriate legal action for violations of this section.
                 </p>
               </div>
@@ -408,7 +408,7 @@ export default function TermsAndConditionsSection() {
                   All rights, title, and interest in and to the Website and
                   Services, including all software, technology, trademarks,
                   logos, designs, text, graphics, and content, are the
-                  exclusive property of HBOXPay or its licensors.
+                  exclusive property of hbox pay or its licensors.
                 </p>
 
                 <p>
@@ -473,7 +473,7 @@ export default function TermsAndConditionsSection() {
 
                 <div>
                   <p className="font-semibold text-black">
-                    HBOXPay does not control and is not responsible for:
+                    hbox pay does not control and is not responsible for:
                   </p>
 
                   <ul className="mt-4 space-y-3 pl-5">
@@ -544,7 +544,7 @@ export default function TermsAndConditionsSection() {
 
               <div className="mt-5 space-y-5 text-[15px] leading-relaxed text-black/70">
                 <p>
-                  HBOXPay may suspend or terminate your access to the
+                  hbox pay may suspend or terminate your access to the
                   Services immediately, with or without notice, if:
                 </p>
 
@@ -611,7 +611,7 @@ export default function TermsAndConditionsSection() {
                 </p>
 
                 <p>
-                  To the fullest extent permitted by law, HBOXPay
+                  To the fullest extent permitted by law, hbox pay
                   disclaims all warranties, including but not limited to:
                 </p>
 
@@ -648,7 +648,7 @@ export default function TermsAndConditionsSection() {
 
               <div className="mt-5 space-y-5 text-[15px] leading-relaxed text-black/70">
                 <p>
-                  To the maximum extent permitted by law, HBOXPay and its
+                  To the maximum extent permitted by law, hbox pay and its
                   affiliates, officers, employees, partners, and licensors
                   shall not be liable for any indirect, incidental,
                   special, consequential, or punitive damages.
@@ -665,8 +665,8 @@ export default function TermsAndConditionsSection() {
                 </ul>
 
                 <p>
-                  In no event shall the total liability of HBOXPay exceed
-                  the amount paid by you to HBOXPay during the twelve (12)
+                  In no event shall the total liability of hbox pay exceed
+                  the amount paid by you to hbox pay during the twelve (12)
                   months preceding the event giving rise to the claim.
                 </p>
               </div>
@@ -688,7 +688,7 @@ export default function TermsAndConditionsSection() {
               <div className="mt-5 space-y-5 text-[15px] leading-relaxed text-black/70">
                 <p>
                   You agree to defend, indemnify, and hold harmless
-                  HBOXPay, its affiliates, directors, employees, and
+                  hbox pay, its affiliates, directors, employees, and
                   partners from and against any claims, damages,
                   liabilities, losses, costs, or expenses arising from:
                 </p>
@@ -786,7 +786,7 @@ export default function TermsAndConditionsSection() {
                 <div className="space-y-2 rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm backdrop-blur-xl">
                   <p>
                     <span className="font-semibold text-black">
-                      HBOXPay
+                      hbox pay
                     </span>
                   </p>
 

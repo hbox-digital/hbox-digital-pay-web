@@ -61,7 +61,7 @@ export default function PrivacyPolicySection() {
 
             <div className="mt-6 max-w-2xl space-y-5 text-[15px] leading-relaxed text-black/70">
               <p>
-                This notice discloses the privacy practices for HBOXpay.com.
+                This notice discloses the privacy practices for hbox pay.com.
                 This privacy notice applies solely to information collected by
                 this website. It will notify you of the following:
               </p>
@@ -279,7 +279,7 @@ export default function PrivacyPolicySection() {
 
               <p className="mt-5 text-[15px] leading-relaxed text-black/70">
                 We make every effort to be as accurate as possible in describing
-                the services and products offered on HBOXpay.com. We do not
+                the services and products offered on hbox pay.com. We do not
                 warrant that the product or service descriptions, or any other
                 content on this site, is accurate, complete, reliable, current,
                 or free of error. Please call or email us immediately if you
@@ -305,11 +305,11 @@ export default function PrivacyPolicySection() {
                 {/* FAQ ITEM */}
                 <div className="rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm backdrop-blur-xl">
                   <h4 className="text-lg font-semibold text-black">
-                    1. What personal information does HBOXPay collect?
+                    1. What personal information does hbox pay collect?
                   </h4>
 
                   <p className="mt-3 text-[15px] leading-relaxed text-black/70">
-                    HBOXPay may collect personal details such as your name,
+                    hbox pay may collect personal details such as your name,
                     email address, phone number, and transaction related
                     information when you use the platform.
                   </p>
@@ -318,7 +318,7 @@ export default function PrivacyPolicySection() {
                 {/* FAQ ITEM */}
                 <div className="rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm backdrop-blur-xl">
                   <h4 className="text-lg font-semibold text-black">
-                    2. How does HBOXPay use my information?
+                    2. How does hbox pay use my information?
                   </h4>
 
                   <p className="mt-3 text-[15px] leading-relaxed text-black/70">
@@ -331,11 +331,11 @@ export default function PrivacyPolicySection() {
                 {/* FAQ ITEM */}
                 <div className="rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm backdrop-blur-xl">
                   <h4 className="text-lg font-semibold text-black">
-                    3. Does HBOXPay share user data with third parties?
+                    3. Does hbox pay share user data with third parties?
                   </h4>
 
                   <p className="mt-3 text-[15px] leading-relaxed text-black/70">
-                    HBOXPay does not sell user data. Information may only be
+                    hbox pay does not sell user data. Information may only be
                     shared with trusted service providers or when legally
                     required.
                   </p>
@@ -344,11 +344,11 @@ export default function PrivacyPolicySection() {
                 {/* FAQ ITEM */}
                 <div className="rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm backdrop-blur-xl">
                   <h4 className="text-lg font-semibold text-black">
-                    4. How does HBOXPay keep my information secure?
+                    4. How does hbox pay keep my information secure?
                   </h4>
 
                   <p className="mt-3 text-[15px] leading-relaxed text-black/70">
-                    HBOXPay uses appropriate security measures and industry
+                    hbox pay uses appropriate security measures and industry
                     standard practices to help protect user information from
                     unauthorized access or misuse.
                   </p>
@@ -384,16 +384,16 @@ export default function PrivacyPolicySection() {
                 href="tel:+16052991570"
                 className="inline-block font-semibold underline underline-offset-4"
               >
-                (605) 299-1570
+              +1-605-307-6026
               </motion.a>{" "}
               or contact us via email at{" "}
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
-                href="mailto:info@HBOXpay.com"
+                href="mailto:info@hbox pay.com"
                 className="inline-block font-semibold underline underline-offset-4"
               >
-                info@HBOXpay.com
+                 info@HBOXPay.com
               </motion.a>
             </p>
           </div>

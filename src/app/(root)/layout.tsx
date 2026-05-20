@@ -9,19 +9,19 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.hboxpay.com"),
 
   title: {
-    default: "HBOXPay | Smart POS & Payment Platform for Businesses",
-    template: "%s | HBOXPay",
+    default: "HBOX Pay | Smart POS & Payment Platform for Businesses",
+    template: "%s | hbox pay",
   },
 
   description:
-    "Manage payments, POS, inventory, analytics, and customer operations with HBOXPay. Built for retail, restaurants, cafes, salons, and growing businesses.",
+    "Manage payments, POS, inventory, analytics, and customer operations with hbox pay. Built for retail, restaurants, cafes, salons, and growing businesses.",
 
   verification: {
     google: "fgKcEh2ocs8zJRcyH-yaqwa0jUsXLpDk5LM5_qVOMfc",
   },
 
   keywords: [
-    "HBOXPay",
+    "hbox pay",
     "POS system",
     "payment platform",
     "inventory management",
@@ -38,21 +38,21 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "HBOXPay | Smart POS & Payment Platform for Businesses",
+    title: "HBOX Pay | Smart POS & Payment Platform for Businesses",
 
     description:
-      "Manage payments, POS, inventory, analytics, and customer operations with HBOXPay.",
+      "Manage payments, POS, inventory, analytics, and customer operations with hbox pay.",
 
     url: "https://www.hboxpay.com",
 
-    siteName: "HBOXPay",
+    siteName: "hbox pay",
 
     images: [
       {
         url: "https://cdn.hboxdigital.com/public/hbox-pay/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "HBOXPay",
+        alt: "hbox pay",
       },
     ],
 
@@ -63,10 +63,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "HBOXPay | Smart POS & Payment Platform for Businesses",
+    title: "hbox pay | Smart POS & Payment Platform for Businesses",
 
     description:
-      "Manage payments, POS, inventory, analytics, and customer operations with HBOXPay.",
+      "Manage payments, POS, inventory, analytics, and customer operations with hbox pay.",
 
     images: ["https://cdn.hboxdigital.com/public/hbox-pay/images/og-image.png"],
   },
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "HBOXPay",
+              name: "hbox pay",
               url: "https://www.hboxpay.com",
               logo: "https://cdn.hboxdigital.com/public/hbox-pay/images/logo.png",
               sameAs: ["https://www.linkedin.com/company/hbox-digital"],

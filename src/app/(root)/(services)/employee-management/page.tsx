@@ -16,7 +16,7 @@ const page = () => {
   titleOne="Smarter Employee Management "
   titleHighlight="for Modern Business Operations"
   titleTwo=""
-  description="HBOXPay Employee Management helps businesses simplify staff operations, manage employee access, and improve workforce visibility through one centralized platform. Designed for retail, hospitality, service businesses, and multi location operations, our employee management tools help businesses maintain better control over daily operations while improving efficiency across teams."
+  description="hbox pay Employee Management helps businesses simplify staff operations, manage employee access, and improve workforce visibility through one centralized platform. Designed for retail, hospitality, service businesses, and multi location operations, our employee management tools help businesses maintain better control over daily operations while improving efficiency across teams."
   backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(10).png"
   buttonText="Talk to Sales"
   buttonHref="/contact"
@@ -148,8 +148,8 @@ const page = () => {
 
 <SupportProcessSectionpro
   title="Why Businesses Choose "
-  highlightText="HBOXPay Employee Management"
-  description="HBOXPay combines workforce management tools, operational controls, and centralized employee visibility to help businesses manage teams more efficiently."
+  highlightText="hbox pay Employee Management"
+  description="hbox pay combines workforce management tools, operational controls, and centralized employee visibility to help businesses manage teams more efficiently."
   cards={[
     {
       title: "Simplified Staff Management",
@@ -190,14 +190,14 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1. What is HBOXPay Employee Management?",
+      question: "1. What is hbox pay Employee Management?",
       answer:
-        "HBOXPay Employee Management is a workforce management solution designed to help businesses manage employee access, monitor staff activity, and improve operational visibility.",
+        "hbox pay Employee Management is a workforce management solution designed to help businesses manage employee access, monitor staff activity, and improve operational visibility.",
     },
     {
       question: "2. Can businesses manage employees across multiple locations?",
       answer:
-        "Yes. HBOXPay supports centralized employee management for businesses operating across multiple locations.",
+        "Yes. hbox pay supports centralized employee management for businesses operating across multiple locations.",
     },
     {
       question: "3. Does the system support role based access controls?",
@@ -211,13 +211,13 @@ const page = () => {
     },
     {
       question:
-        "5. Which industries can use HBOXPay Employee Management?",
+        "5. Which industries can use hbox pay Employee Management?",
       answer:
         "Our employee management solutions are designed for retail stores, restaurants, hospitality businesses, supermarkets, service providers, and enterprise operations.",
     },
     {
       question:
-        "6. Is HBOXPay Employee Management easy to use?",
+        "6. Is hbox pay Employee Management easy to use?",
       answer:
         "Yes. The platform is designed with a user-friendly interface that simplifies workforce management and daily operational tasks.",
     },
@@ -229,7 +229,7 @@ const page = () => {
         highlightText="Smarter Business Management"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008.png"
         descriptionOne="Modern businesses need more than standalone payment systems. They need connected tools that improve visibility, simplify operations, and create seamless customer experiences across every touchpoint."
-        descriptionTwo="HBOXPay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
+        descriptionTwo="hbox pay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
         descriptionThree=""
         imagePosition="right"
       />

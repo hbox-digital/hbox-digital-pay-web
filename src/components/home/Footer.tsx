@@ -30,7 +30,7 @@ const hardwareLinks = [
   },
   {
     label: "Accessories",
-    href: "#",
+    href: "/accessories",
   },
 ];
 

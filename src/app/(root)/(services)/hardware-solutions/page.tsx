@@ -16,7 +16,7 @@ const page = () => {
         titleOne="Smart Payment Hardware "
         titleHighlight="Built for Modern Business Environments"
         titleTwo=""
-        description="Whether managing retail checkouts, hospitality operations, or enterprise environments, HBOXPay hardware solutions are designed to keep businesses connected, efficient, and ready for growth."
+        description="Whether managing retail checkouts, hospitality operations, or enterprise environments, hbox pay hardware solutions are designed to keep businesses connected, efficient, and ready for growth."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(6).png"
         buttonText="Talk to Sales"
         buttonHref="/contact"
@@ -26,7 +26,7 @@ const page = () => {
         title="Hardware Designed for"
         highlightText=" Real Business Operations"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008%20(3).png"
-        descriptionOne="Modern businesses need hardware that performs consistently in fast paced environments. HBOXPay combines advanced payment technology with modern device design to help businesses simplify operations, improve mobility, and create seamless checkout experiences."
+        descriptionOne="Modern businesses need hardware that performs consistently in fast paced environments. hbox pay combines advanced payment technology with modern device design to help businesses simplify operations, improve mobility, and create seamless checkout experiences."
         descriptionTwo="Our hardware lineup supports retail stores, restaurants, hospitality businesses, service providers, and multi location operations looking for reliable payment infrastructure and scalable deployment options."
         descriptionThree=""
         imagePosition="left"
@@ -204,35 +204,35 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1.What types of hardware does HBOXPay provide?",
+      question: "1.What types of hardware does hbox pay provide?",
       answer:
-        "HBOXPay offers Android POS devices, countertop payment terminals, portable payment systems, self service kiosks, kitchen display systems, and business accessories.",
+        "hbox pay offers Android POS devices, countertop payment terminals, portable payment systems, self service kiosks, kitchen display systems, and business accessories.",
     },
     {
-      question: "2.Are HBOXPay devices suitable for mobile businesses?",
+      question: "2.Are hbox pay devices suitable for mobile businesses?",
       answer:
         "Yes. Devices like the PAX A920 and Flex Pocket are designed for portable and mobile payment environments.",
     },
     {
-      question: "3.Do HBOXPay devices support contactless payments?",
+      question: "3.Do hbox pay devices support contactless payments?",
       answer:
         "Yes. Our payment hardware supports contactless payments, QR transactions, digital wallets, and traditional card payments.",
     },
     {
       question:
-        "4.Can HBOXPay hardware support multi location businesses?",
+        "4.Can hbox pay hardware support multi location businesses?",
       answer:
         "Yes. Our hardware solutions are designed for scalable deployment across multiple business locations and enterprise operations.",
     },
     {
       question:
-        "5.Are HBOXPay hardware systems compatible with POS software?",
+        "5.Are hbox pay hardware systems compatible with POS software?",
       answer:
-        "Yes. HBOXPay hardware is designed to integrate with compatible POS software and payment systems.",
+        "Yes. hbox pay hardware is designed to integrate with compatible POS software and payment systems.",
     },
     {
       question:
-        "6.Which industries can use HBOXPay hardware solutions?",
+        "6.Which industries can use hbox pay hardware solutions?",
       answer:
         "Our hardware solutions support retail, hospitality, restaurants, supermarkets, service businesses, and enterprise operations.",
     },
@@ -327,9 +327,9 @@ const page = () => {
       />
      
 <SupportProcessSectionpro
-  title="Why Businesses Choose HBOXPay Payment Processing"
+  title="Why Businesses Choose hbox pay Payment Processing"
   highlightText=""
-  description="HBOXPay combines modern payment technology with scalable infrastructure designed to support smooth and uninterrupted business transactions."
+  description="hbox pay combines modern payment technology with scalable infrastructure designed to support smooth and uninterrupted business transactions."
   cards={[
     {
       title: "Seamless Payment Experiences",
@@ -363,14 +363,14 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1.What payment methods does HBOXPay support?",
+      question: "1.What payment methods does hbox pay support?",
       answer:
-        "HBOXPay supports credit cards, debit cards, contactless payments, QR payments, digital wallets, and mobile payment solutions.",
+        "hbox pay supports credit cards, debit cards, contactless payments, QR payments, digital wallets, and mobile payment solutions.",
     },
     {
-      question: "2.Are HBOXPay payment systems secure?",
+      question: "2.Are hbox pay payment systems secure?",
       answer:
-        "Yes. HBOXPay uses secure payment technologies and encrypted transaction processing to help protect payment and customer data.",
+        "Yes. hbox pay uses secure payment technologies and encrypted transaction processing to help protect payment and customer data.",
     },
     {
       question:
@@ -379,18 +379,18 @@ const page = () => {
         "Yes. Our payment infrastructure supports centralized management for businesses operating across multiple locations.",
     },
     {
-      question: "4.Does HBOXPay support contactless payments?",
+      question: "4.Does hbox pay support contactless payments?",
       answer:
         "Yes. Businesses can accept contactless card payments and digital wallet transactions through supported payment devices.",
     },
     {
-      question: "5.Can HBOXPay integrate with POS systems?",
+      question: "5.Can hbox pay integrate with POS systems?",
       answer:
-        "Yes. HBOXPay Payment Processing solutions are designed to integrate with compatible POS systems and business operations.",
+        "Yes. hbox pay Payment Processing solutions are designed to integrate with compatible POS systems and business operations.",
     },
     {
       question:
-        "6.Is HBOXPay suitable for small and growing businesses?",
+        "6.Is hbox pay suitable for small and growing businesses?",
       answer:
         "Yes. Our payment solutions are designed to support businesses of all sizes, from small businesses to enterprise operations.",
     },

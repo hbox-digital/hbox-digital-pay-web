@@ -45,7 +45,7 @@ export default function SingleFeatureSection({
             }}
             className="lg:col-span-6"
           >
-            <div className="relative h-[240px] overflow-hidden rounded-[22px] sm:h-[320px] lg:h-[420px]">
+            <div className="relative h-[240px] overflow-hidden rounded-[22px] sm:h-[320px] lg:h-[520px]">
               <Image
                 src={image}
                 alt={title}

@@ -16,7 +16,7 @@ const page = () => {
         titleOne="Smarter Inventory "
         titleHighlight="Management for "
         titleTwo="Modern Businesses"
-        description="HBOXPay Inventory Management helps businesses track stock, monitor product movement, and maintain better operational control through a centralized and easy to manage system. Designed for retail, hospitality, supermarkets, and multi location businesses."
+        description="hbox pay Inventory Management helps businesses track stock, monitor product movement, and maintain better operational control through a centralized and easy to manage system. Designed for retail, hospitality, supermarkets, and multi location businesses."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(8).png"
         buttonText="Talk to Sales "
         buttonHref="/contact"
@@ -26,7 +26,7 @@ const page = () => {
         title="Simplify "
         highlightText="Inventory Operations"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008%20(4).png"
-        descriptionOne="HBOXPay Inventory Management is designed to help businesses maintain accurate inventory visibility while simplifying daily operations across products, locations, and sales channels. Whether managing a single store or multiple business locations, businesses can track inventory in real time and make informed operational decisions through one connected platform."
+        descriptionOne="hbox pay Inventory Management is designed to help businesses maintain accurate inventory visibility while simplifying daily operations across products, locations, and sales channels. Whether managing a single store or multiple business locations, businesses can track inventory in real time and make informed operational decisions through one connected platform."
         descriptionTwo=""
         descriptionThree=""
         imagePosition="right"
@@ -149,8 +149,8 @@ const page = () => {
       />
 <SupportProcessSectionpro
   title="Why Businesses Choose "
-  highlightText="HBOXPay Inventory Management"
-  description="HBOXPay combines real time tracking, centralized management, and operational simplicity to help businesses maintain better inventory control."
+  highlightText="hbox pay Inventory Management"
+  description="hbox pay combines real time tracking, centralized management, and operational simplicity to help businesses maintain better inventory control."
   cards={[
     {
       title: "Real Time Inventory Updates",
@@ -191,14 +191,14 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1. What is HBOXPay Inventory Management?",
+      question: "1. What is hbox pay Inventory Management?",
       answer:
-        "HBOXPay Inventory Management is a system designed to help businesses track stock, manage inventory, monitor product movement, and improve operational visibility.",
+        "hbox pay Inventory Management is a system designed to help businesses track stock, manage inventory, monitor product movement, and improve operational visibility.",
     },
     {
       question: "2. Can businesses manage inventory across multiple locations?",
       answer:
-        "Yes. HBOXPay supports multi location inventory management with centralized visibility and reporting.",
+        "Yes. hbox pay supports multi location inventory management with centralized visibility and reporting.",
     },
     {
       question: "3. Does the system provide real time inventory tracking?",
@@ -212,13 +212,13 @@ const page = () => {
     },
     {
       question:
-        "5. Which industries can use HBOXPay Inventory Management?",
+        "5. Which industries can use hbox pay Inventory Management?",
       answer:
         "Our inventory solutions are designed for retail stores, supermarkets, restaurants, hospitality businesses, and service based operations.",
     },
     {
       question:
-        "6. Is HBOXPay Inventory Management easy to use?",
+        "6. Is hbox pay Inventory Management easy to use?",
       answer:
         "Yes. The platform is designed with a user friendly interface that simplifies inventory management and operational workflows.",
     },

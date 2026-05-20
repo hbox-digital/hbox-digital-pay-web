@@ -191,7 +191,7 @@ export default function Allcourcarts() {
               className="max-w-[720px] lg:ml-auto"
             >
               <p className="font-inter text-fluid-subtitle font-normal text-black/80">
-                From payments to operations, HBOXPay gives businesses the tools
+                From payments to operations, hbox pay gives businesses the tools
                 to manage sales, simplify workflows, and grow with confidence.
               </p>
             </motion.div>

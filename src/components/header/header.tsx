@@ -511,10 +511,10 @@ export default function Header() {
                       </p>
 
                       <Link
-                        href="mailto:sales@hboxpay.com"
+                        href="mailto:sales@hbox pay.com"
                         className="text-[13px] text-black transition-colors hover:text-[#45890F]"
                       >
-                      sales@hboxpay.com
+                      sales@hbox pay.com
                       </Link>
                     </motion.div>
                   </div>

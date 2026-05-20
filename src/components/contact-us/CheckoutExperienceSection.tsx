@@ -50,10 +50,10 @@ const contactCards = [
   },
   {
     icon: Mail,
-    title: "sales@hboxpay.com",
+    title: "sales@hbox pay.com",
     description:
       "Send us your questions and our team will get back to you quickly.",
-    href: "mailto:sales@hboxpay.com",
+    href: "mailto:sales@hbox pay.com",
   },
   {
     icon: MapPin,

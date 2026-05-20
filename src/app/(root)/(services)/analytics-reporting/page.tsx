@@ -16,7 +16,7 @@ const page = () => {
         titleOne="Turn Business Data "
         titleHighlight="Into Smarter Decisions"
         titleTwo=""
-        description="HBOXPay Analytics & Reporting gives businesses real time visibility into sales, transactions, operational performance, and customer activity through centralized reporting tools designed for modern business operations. From daily transaction summaries to performance insights across multiple locations, businesses can access the information they need to make faster and more informed decisions."
+        description="hbox pay Analytics & Reporting gives businesses real time visibility into sales, transactions, operational performance, and customer activity through centralized reporting tools designed for modern business operations. From daily transaction summaries to performance insights across multiple locations, businesses can access the information they need to make faster and more informed decisions."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(9).png"
         buttonText="Talk to Sales"
         buttonHref="/contact"
@@ -149,8 +149,8 @@ const page = () => {
 
 <SupportProcessSectionpro
   title="Why Businesses Choose "
-  highlightText="HBOXPay Analytics & Reporting"
-  description="HBOXPay combines real time reporting, operational insights, and centralized visibility to help businesses improve decision making and operational performance."
+  highlightText="hbox pay Analytics & Reporting"
+  description="hbox pay combines real time reporting, operational insights, and centralized visibility to help businesses improve decision making and operational performance."
   cards={[
     {
       title: "Real Time Operational Insights",
@@ -191,9 +191,9 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1.What is HBOXPay Analytics & Reporting?",
+      question: "1.What is hbox pay Analytics & Reporting?",
       answer:
-        "HBOXPay Analytics & Reporting is a business reporting solution that helps businesses track sales, monitor transactions, analyze operational performance, and access real time business insights.",
+        "hbox pay Analytics & Reporting is a business reporting solution that helps businesses track sales, monitor transactions, analyze operational performance, and access real time business insights.",
     },
     {
       question: "2.Can businesses monitor sales in real time?",
@@ -202,14 +202,14 @@ const page = () => {
     },
     {
       question:
-        "3.Does HBOXPay support reporting for multiple locations?",
+        "3.Does hbox pay support reporting for multiple locations?",
       answer:
         "Yes. Businesses operating across multiple locations can manage centralized reporting and operational visibility from one platform.",
     },
     {
       question: "4.What types of reports are available?",
       answer:
-        "HBOXPay provides sales reports, transaction summaries, operational insights, payment analytics, and business performance reporting.",
+        "hbox pay provides sales reports, transaction summaries, operational insights, payment analytics, and business performance reporting.",
     },
     {
       question: "5.Is the reporting system easy to use?",
@@ -218,7 +218,7 @@ const page = () => {
     },
     {
       question:
-        "6.Which industries can use HBOXPay Analytics & Reporting?",
+        "6.Which industries can use hbox pay Analytics & Reporting?",
       answer:
         "Our reporting solutions are designed for retail stores, hospitality businesses, restaurants, supermarkets, service providers, and enterprise operations.",
     },
@@ -230,7 +230,7 @@ const page = () => {
         highlightText="Smarter Business Management"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008.png"
         descriptionOne="Modern businesses need more than standalone payment systems. They need connected tools that improve visibility, simplify operations, and create seamless customer experiences across every touchpoint."
-        descriptionTwo="HBOXPay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
+        descriptionTwo="hbox pay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
         descriptionThree=""
         imagePosition="right"
       />

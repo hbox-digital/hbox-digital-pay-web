@@ -112,7 +112,7 @@ export default function BusinessSolutionsSection() {
               className="max-w-[620px] lg:ml-auto"
             >
               <p className="font-inter text-fluid-subtitle font-normal text-black">
-                HBOXPay brings together payments, operations, reporting, and
+                hbox pay brings together payments, operations, reporting, and
                 customer management into one connected ecosystem.
               </p>
             </motion.div>

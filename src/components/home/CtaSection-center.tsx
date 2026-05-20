@@ -78,7 +78,7 @@ export default function CtaSection() {
             >
               Start Growing Your Business{" "}
               <span className="font-semibold text-[#A3EC6B]">
-                with HBOXPay
+                with hbox pay
               </span>
             </motion.h2>
 
@@ -95,7 +95,7 @@ export default function CtaSection() {
               className="mt-6 max-w-[760px] font-inter text-fluid-body font-normal tracking-[-0.03em] text-white"
             >
               From payments and POS systems to inventory, analytics, and
-              customer management, HBOXPay gives businesses the tools to operate
+              customer management, hbox pay gives businesses the tools to operate
               smarter and grow faster.
             </motion.p>
 

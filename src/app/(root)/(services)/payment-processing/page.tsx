@@ -16,7 +16,7 @@ const page = () => {
         titleOne="Secure Payment Processing "
         titleHighlight="Built for Modern Businesses "
         titleTwo="for Modern Business Operations"
-        description="From card payments and contactless transactions to digital wallets and QR payments, HBOXPay provides businesses with the flexibility and reliability needed to deliver smooth payment experiences every day."
+        description="From card payments and contactless transactions to digital wallets and QR payments, hbox pay provides businesses with the flexibility and reliability needed to deliver smooth payment experiences every day."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(5).png"
         buttonText="Talk to Sales"
         buttonHref="/contact"
@@ -153,7 +153,7 @@ const page = () => {
 <SupportProcessSectionpro
   title="Built for Real Business Environments"
   highlightText=""
-  description="HBOXPay combines modern software functionality with a user friendly experience designed to support daily business operations without unnecessary complexity."
+  description="hbox pay combines modern software functionality with a user friendly experience designed to support daily business operations without unnecessary complexity."
   cards={[
     {
       title: "Easy to Use",
@@ -194,19 +194,19 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1.What is HBOXPay POS Software?",
+      question: "1.What is hbox pay POS Software?",
       answer:
-        "HBOXPay POS Software is a business management platform designed to help businesses process transactions, manage inventory, track sales, and simplify daily operations.",
+        "hbox pay POS Software is a business management platform designed to help businesses process transactions, manage inventory, track sales, and simplify daily operations.",
     },
     {
-      question: "2.What industries can use HBOXPay POS Software?",
+      question: "2.What industries can use hbox pay POS Software?",
       answer:
         "Our POS software is designed for retail stores, restaurants, cafes, hospitality businesses, supermarkets, and service based businesses.",
     },
     {
       question: "3.Does the software support multiple business locations?",
       answer:
-        "Yes. HBOXPay supports multi store management with centralized operational visibility and reporting.",
+        "Yes. hbox pay supports multi store management with centralized operational visibility and reporting.",
     },
     {
       question: "4.Can businesses track inventory through the POS system?",
@@ -214,12 +214,12 @@ const page = () => {
         "Yes. The software includes inventory management tools that help businesses monitor stock levels and product movement in real time.",
     },
     {
-      question: "5.Does HBOXPay POS Software support contactless payments?",
+      question: "5.Does hbox pay POS Software support contactless payments?",
       answer:
         "Yes. The system supports contactless transactions, QR payments, digital wallets, and traditional card payments.",
     },
     {
-      question: "6.Is HBOXPay POS Software easy to use?",
+      question: "6.Is hbox pay POS Software easy to use?",
       answer:
         "Yes. The platform is designed with a user friendly interface that helps businesses manage operations efficiently without complicated workflows.",
     },
@@ -231,7 +231,7 @@ const page = () => {
         highlightText="Smarter Business Management"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008.png"
         descriptionOne="Modern businesses need more than standalone payment systems. They need connected tools that improve visibility, simplify operations, and create seamless customer experiences across every touchpoint."
-        descriptionTwo="HBOXPay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
+        descriptionTwo="hbox pay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
         descriptionThree=""
         imagePosition="right"
       />

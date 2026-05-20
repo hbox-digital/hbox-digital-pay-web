@@ -27,34 +27,34 @@ const fadeUp = {
 
 const faqs = [
   {
-    question: "How do I sign up with HBOXPay?",
+    question: "How do I sign up with hbox pay?",
     answer:
-      "Getting started with HBOXPay is simple. Businesses can sign up, choose the right POS and payment solutions, complete setup, and start managing payments and operations from one platform.",
+      "Getting started with hbox pay is simple. Businesses can sign up, choose the right POS and payment solutions, complete setup, and start managing payments and operations from one platform.",
   },
   {
-    question: "What businesses can use the HBOXPay system?",
+    question: "What businesses can use the hbox pay system?",
     answer:
-      "HBOXPay is designed for restaurants, retail stores, cafes, grocery stores, salons, and service based businesses looking to simplify operations, manage sales, and accept secure payments.",
+      "hbox pay is designed for restaurants, retail stores, cafes, grocery stores, salons, and service based businesses looking to simplify operations, manage sales, and accept secure payments.",
   },
   {
-    question: "Does HBOXPay support card, QR, and contactless payments?",
+    question: "Does hbox pay support card, QR, and contactless payments?",
     answer:
-      "Yes, HBOXPay supports card payments, QR payments, tap to pay, contactless transactions, and digital wallets for faster and more flexible payment processing.",
+      "Yes, hbox pay supports card payments, QR payments, tap to pay, contactless transactions, and digital wallets for faster and more flexible payment processing.",
   },
   {
-    question: "Can HBOXPay manage inventory and multiple store locations?",
+    question: "Can hbox pay manage inventory and multiple store locations?",
     answer:
-      "HBOXPay includes inventory management and multi store management tools that help businesses track stock, monitor sales, and manage operations across different locations.",
+      "hbox pay includes inventory management and multi store management tools that help businesses track stock, monitor sales, and manage operations across different locations.",
   },
   {
-    question: "Is HBOXPay suitable for small businesses and growing brands?",
+    question: "Is hbox pay suitable for small businesses and growing brands?",
     answer:
-      "Yes, HBOXPay is built for startups, small businesses, and growing brands that need scalable POS software, payment solutions, and business management tools.",
+      "Yes, hbox pay is built for startups, small businesses, and growing brands that need scalable POS software, payment solutions, and business management tools.",
   },
   {
-    question: "How long does it take to set up HBOXPay POS hardware and software?",
+    question: "How long does it take to set up hbox pay POS hardware and software?",
     answer:
-      "Most HBOXPay systems can be set up quickly with guided onboarding, allowing businesses to start accepting payments and managing operations with minimal downtime.",
+      "Most hbox pay systems can be set up quickly with guided onboarding, allowing businesses to start accepting payments and managing operations with minimal downtime.",
   },
 ];
 

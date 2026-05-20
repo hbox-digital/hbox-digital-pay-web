@@ -153,7 +153,7 @@ keyBenefits={[
 <PerformanceGridSection
   title="Built for Reliability and"
   highlightText="Performance"
-  description="HBOXPay combines modern payment technology with dependable hardware solutions to help businesses operate more efficiently."
+  description="hbox pay combines modern payment technology with dependable hardware solutions to help businesses operate more efficiently."
   cards={[
     {
       title: "Fast Transactions",
@@ -191,7 +191,7 @@ keyBenefits={[
 <IndustriesSupportSection
   title="Industries"
   highlightText="We Support"
-  description="HBOXPay solutions are designed for a wide range of industries and business environments."
+  description="hbox pay solutions are designed for a wide range of industries and business environments."
   industries={[
     {
       title: "Retail Stores",
@@ -241,43 +241,43 @@ highlightText="Questions"
 faqs={[
   {
     question:
-      "What industries does HBOXPay support?",
+      "What industries does hbox pay support?",
     answer:
-      "HBOXPay solutions are designed for retail stores, restaurants, cafes, hospitality businesses, supermarkets, service providers, and enterprise operations that require reliable and scalable payment technology.",
+      "hbox pay solutions are designed for retail stores, restaurants, cafes, hospitality businesses, supermarkets, service providers, and enterprise operations that require reliable and scalable payment technology.",
   },
   {
     question:
-      "What types of payment hardware does HBOXPay offer?",
+      "What types of payment hardware does hbox pay offer?",
     answer:
-      "HBOXPay provides smart Android POS systems, portable payment terminals, countertop devices, and self service kiosk solutions designed for modern business environments.",
+      "hbox pay provides smart Android POS systems, portable payment terminals, countertop devices, and self service kiosk solutions designed for modern business environments.",
   },
   {
     question:
-      "Do HBOXPay solutions support contactless payments?",
+      "Do hbox pay solutions support contactless payments?",
     answer:
-      "Yes. HBOXPay solutions support contactless payments, mobile wallets, QR payments, and traditional card transactions for a seamless customer experience.",
+      "Yes. hbox pay solutions support contactless payments, mobile wallets, QR payments, and traditional card transactions for a seamless customer experience.",
   },
   {
     question:
-      "Can HBOXPay solutions scale with growing businesses?",
+      "Can hbox pay solutions scale with growing businesses?",
     answer:
       "Absolutely. Our payment infrastructure is built to support businesses as they expand operations, add locations, and manage higher transaction volumes.",
   },
   {
     question:
-      "Can businesses use HBOXPay across multiple locations?",
+      "Can businesses use hbox pay across multiple locations?",
     answer:
-      "Yes. HBOXPay supports multi location deployment and centralized payment management for businesses operating across multiple branches or business environments.",
+      "Yes. hbox pay supports multi location deployment and centralized payment management for businesses operating across multiple branches or business environments.",
   },
   {
     question:
-      "Does HBOXPay offer self service payment solutions?",
+      "Does hbox pay offer self service payment solutions?",
     answer:
-      "Yes. HBOXPay provides self service kiosk and touchscreen POS solutions that help businesses improve efficiency and reduce customer wait times.",
+      "Yes. hbox pay provides self service kiosk and touchscreen POS solutions that help businesses improve efficiency and reduce customer wait times.",
   },
   {
     question:
-      "How can businesses get started with HBOXPay?",
+      "How can businesses get started with hbox pay?",
     answer:
       "Businesses can contact our sales team to explore payment solutions, discuss operational requirements, and find the right POS hardware for their business needs.",
   },

@@ -14,7 +14,7 @@ const page = () => {
         titleOne="Smart POS "
         titleHighlight="Software Built "
         titleTwo="for Modern Business Operations"
-        description="HBOXPay POS Software helps businesses simplify sales, manage transactions efficiently, and improve daily operations through a powerful and easy to use platform. Designed for retail, hospitality, and multi location businesses, our POS system combines speed, flexibility, and real time business visibility in one connected solution."
+        description="hbox pay POS Software helps businesses simplify sales, manage transactions efficiently, and improve daily operations through a powerful and easy to use platform. Designed for retail, hospitality, and multi location businesses, our POS system combines speed, flexibility, and real time business visibility in one connected solution."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(4).png"
         buttonText="Talk to Sales"
         buttonHref="/contact"
@@ -25,7 +25,7 @@ const page = () => {
         highlightText="Your Business Operates"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008%20(1).png"
         descriptionOne="Modern businesses need more than basic billing systems. They need connected tools that support sales, inventory, staff management, customer engagement, and reporting without slowing down operations."
-        descriptionTwo="HBOXPay POS Software is designed to help businesses manage everyday tasks more efficiently while maintaining fast and reliable transaction performance across every touchpoint."
+        descriptionTwo="hbox pay POS Software is designed to help businesses manage everyday tasks more efficiently while maintaining fast and reliable transaction performance across every touchpoint."
         descriptionThree="Whether operating a single store or multiple business locations, businesses can manage operations through one centralized platform built for flexibility and scalability."
         imagePosition="left"
       />
@@ -147,9 +147,9 @@ const page = () => {
         ]}
       />
 <SupportProcessSectionpro
-  title="Why Businesses Choose HBOXPay Payment Processing"
+  title="Why Businesses Choose hbox pay Payment Processing"
   highlightText=""
-  description="HBOXPay combines modern payment technology with scalable infrastructure designed to support smooth and uninterrupted business transactions."
+  description="hbox pay combines modern payment technology with scalable infrastructure designed to support smooth and uninterrupted business transactions."
   cards={[
     {
       title: "Seamless Payment Experiences",
@@ -179,7 +179,7 @@ const page = () => {
 />
       <CtaBannerSection
         title="Power Faster & More Secure "
-        highlightText="Transactions with HBOXPay"
+        highlightText="Transactions with hbox pay"
         description="Explore payment processing solutions designed for modern business operations and seamless customer experiences."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625007%20(1).png"
         buttonText="Get Started"
@@ -190,14 +190,14 @@ const page = () => {
   highlightText="Questions"
   faqs={[
     {
-      question: "1.What payment methods does HBOXPay support?",
+      question: "1.What payment methods does hbox pay support?",
       answer:
-        "HBOXPay supports credit cards, debit cards, contactless payments, QR payments, digital wallets, and mobile payment solutions.",
+        "hbox pay supports credit cards, debit cards, contactless payments, QR payments, digital wallets, and mobile payment solutions.",
     },
     {
-      question: "2.Are HBOXPay payment systems secure?",
+      question: "2.Are hbox pay payment systems secure?",
       answer:
-        "Yes. HBOXPay uses secure payment technologies and encrypted transaction processing to help protect payment and customer data.",
+        "Yes. hbox pay uses secure payment technologies and encrypted transaction processing to help protect payment and customer data.",
     },
     {
       question:
@@ -206,18 +206,18 @@ const page = () => {
         "Yes. Our payment infrastructure supports centralized management for businesses operating across multiple locations.",
     },
     {
-      question: "4.Does HBOXPay support contactless payments?",
+      question: "4.Does hbox pay support contactless payments?",
       answer:
         "Yes. Businesses can accept contactless card payments and digital wallet transactions through supported payment devices.",
     },
     {
-      question: "5.Can HBOXPay integrate with POS systems?",
+      question: "5.Can hbox pay integrate with POS systems?",
       answer:
-        "Yes. HBOXPay Payment Processing solutions are designed to integrate with compatible POS systems and business operations.",
+        "Yes. hbox pay Payment Processing solutions are designed to integrate with compatible POS systems and business operations.",
     },
     {
       question:
-        "6.Is HBOXPay suitable for small and growing businesses?",
+        "6.Is hbox pay suitable for small and growing businesses?",
       answer:
         "Yes. Our payment solutions are designed to support businesses of all sizes, from small businesses to enterprise operations.",
     },

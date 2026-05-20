@@ -13,7 +13,7 @@ const page = () => {
         titleOne="Payment Solutions "
         titleHighlight="Built for "
         titleTwo="Modern Business Operations"
-        description="HBOXPay provides integrated solutions ranging from POS software and payment processing to inventory management and business financing, helping businesses streamline operations and support modern commerce across retail, hospitality, and enterprise environments."
+        description="hbox pay provides integrated solutions ranging from POS software and payment processing to inventory management and business financing, helping businesses streamline operations and support modern commerce across retail, hospitality, and enterprise environments."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034624995%20(2).png"
         buttonText="Talk to Sales"
         buttonHref="/contact"
@@ -24,7 +24,7 @@ const page = () => {
         highlightText="Smarter Business Management"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008.png"
         descriptionOne="Modern businesses need more than standalone payment systems. They need connected tools that improve visibility, simplify operations, and create seamless customer experiences across every touchpoint."
-        descriptionTwo="HBOXPay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
+        descriptionTwo="hbox pay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
         descriptionThree=""
         imagePosition="right"
       />
@@ -125,7 +125,7 @@ const page = () => {
         highlightText=" Across Industries"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625061.png"
         imagePosition="left"
-        descriptionOne="HBOXPay solutions support businesses operating in fast paced industries that require reliable payment technology and operational efficiency."
+        descriptionOne="hbox pay solutions support businesses operating in fast paced industries that require reliable payment technology and operational efficiency."
         descriptionTwo=""
         descriptionThree=""
         keyBenefits={[
@@ -171,7 +171,7 @@ const page = () => {
       />
       <CtaBannerSection
         title="Build Smarter Business"
-        highlightText=" Operations with HBOXPay"
+        highlightText=" Operations with hbox pay"
         description="Explore integrated payment and business management solutions designed for modern commerce."
         backgroundImage="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625007.png"
         buttonText="Get Started"
@@ -182,35 +182,35 @@ const page = () => {
         highlightText="Questions"
         faqs={[
           {
-            question: "1.What services does HBOXPay provide?",
+            question: "1.What services does hbox pay provide?",
             answer:
-              "HBOXPay offers integrated payment and business management solutions including POS software, payment processing, hardware systems, inventory management, CRM tools, loyalty programs, and business financing solutions.",
+              "hbox pay offers integrated payment and business management solutions including POS software, payment processing, hardware systems, inventory management, CRM tools, loyalty programs, and business financing solutions.",
           },
           {
-            question: "2.Are HBOXPay solutions suitable for small businesses?",
+            question: "2.Are hbox pay solutions suitable for small businesses?",
             answer:
-              "Yes. HBOXPay solutions are designed to support businesses of all sizes, from small retail stores to enterprise operations.",
+              "Yes. hbox pay solutions are designed to support businesses of all sizes, from small retail stores to enterprise operations.",
           },
           {
-            question: "3.Can HBOXPay support multi location businesses?",
+            question: "3.Can hbox pay support multi location businesses?",
             answer:
               "Yes. Our solutions support centralized management and scalable operations across multiple business locations.",
           },
           {
             question:
-              "4.Does HBOXPay provide both hardware and software solutions?",
+              "4.Does hbox pay provide both hardware and software solutions?",
             answer:
-              "Yes. HBOXPay offers integrated hardware and software solutions designed to work together seamlessly.",
+              "Yes. hbox pay offers integrated hardware and software solutions designed to work together seamlessly.",
           },
           {
-            question: "5.Are HBOXPay payment systems secure?",
+            question: "5.Are hbox pay payment systems secure?",
             answer:
-              "Yes. HBOXPay solutions use secure transaction processing and advanced payment security technologies to help protect business and customer data.",
+              "Yes. hbox pay solutions use secure transaction processing and advanced payment security technologies to help protect business and customer data.",
           },
           {
-            question: "6. Can HBOXPay solutions scale as businesses grow?",
+            question: "6. Can hbox pay solutions scale as businesses grow?",
             answer:
-              "Yes. HBOXPay solutions are built to support growing businesses with scalable technology, flexible infrastructure, and tools designed to adapt to changing operational needs.",
+              "Yes. hbox pay solutions are built to support growing businesses with scalable technology, flexible infrastructure, and tools designed to adapt to changing operational needs.",
           },
         ]}
       />

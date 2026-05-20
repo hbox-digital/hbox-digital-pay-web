@@ -232,7 +232,7 @@ const page = () => {
         highlightText="Smarter Business Management"
         image="https://cdn.hboxdigital.com/public/hbox-pay/images/Rectangle%2034625008.png"
         descriptionOne="Modern businesses need more than standalone payment systems. They need connected tools that improve visibility, simplify operations, and create seamless customer experiences across every touchpoint."
-        descriptionTwo="HBOXPay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
+        descriptionTwo="hbox pay combines payment infrastructure, smart business tools, and scalable technology into one connected ecosystem designed to support growing businesses in fast moving industries."
         descriptionThree=""
         imagePosition="right"
       />
