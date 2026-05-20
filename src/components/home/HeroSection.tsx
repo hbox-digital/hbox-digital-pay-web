@@ -101,7 +101,7 @@ export default function HeroSection() {
                   delay: 0.2,
                   ease,
                 }}
-                className="mt-5 max-w-[760px] font-inter text-fluid-subtitle font-normal text-black md:mt-6"
+                className="mt-5 max-w-[800px] font-inter text-fluid-subtitle font-normal text-black md:mt-6"
               >
                 Payments, inventory, analytics, and business operations unified
                 into one powerful platform built for modern businesses.

@@ -4,7 +4,15 @@ import Footer from "@/components/home/Footer";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import Script from "next/script";
+import { Inter } from "next/font/google";
+// import "./globals.css";
 
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hboxpay.com"),
 
@@ -80,7 +88,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+           <body className={`${inter.variable} antialiased`}>
         {/* Schema.org */}
         <Script
           id="schema-org"
